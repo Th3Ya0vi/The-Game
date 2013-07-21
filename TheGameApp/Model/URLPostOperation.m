@@ -50,7 +50,7 @@
     _isExecuting = YES;
     [self didChangeValueForKey:@"isExecuting"];
     
-    [self entryJSONToUrl:_url param:nil];
+    [self entryJSONToUrl:_url param:_param];
 }
 
 - (void)finish
@@ -69,10 +69,7 @@
 
 -(void) entryJSONToUrl:(NSString*)urlString param:(NSDictionary*)parameters
 {
-    NSMutableDictionary *requestHeaders = [[NSMutableDictionary alloc] init];
-    [requestHeaders setObject:@"application/json" forKey:@"Content-Type"];
-    
-    [[LRResty client] post:urlString payload:parameters headers:requestHeaders withBlock:^(LRRestyResponse *response) {
+    [[LRResty client] post:urlString payload:parameters headers:nil withBlock:^(LRRestyResponse *response) {
         if(response.status == 200)  {
             
             //NSLog(@"%@", response.asString);
@@ -81,7 +78,6 @@
         }
         else
         {
-            NSLog(@"%@", response.asString);
             [self finish];
             failedBlockDownloader();
         }

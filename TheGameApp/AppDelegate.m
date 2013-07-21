@@ -7,8 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import <Reachability/Reachability.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+
+@interface AppDelegate ()
+
+@property (nonatomic, strong) Reachability *hostReach;
+@property (nonatomic, strong) Reachability *internetReach;
+@property (nonatomic, strong) Reachability *wifiReach;
+
+@end
 
 @implementation AppDelegate
+@synthesize hostReach;
+@synthesize internetReach;
+@synthesize wifiReach;
+@synthesize networkStatus;
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -17,15 +31,49 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    [self monitorReachability];
+    
+    [[PlayerManager sharedInstance] connectPlayer];
+    [[PlayerManager sharedInstance] listOfPlayers];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [[PlayerManager sharedInstance] connectPlayer];
-    
-    [[PlayerManager sharedInstance] listOfPlayers];
-    
     return YES;
+}
+
+- (void)monitorReachability {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    self.hostReach = [Reachability reachabilityWithHostname: @"thegame.radanisk.com"];
+    [self.hostReach startNotifier];
+    
+    self.internetReach = [Reachability reachabilityForInternetConnection];
+    [self.internetReach startNotifier];
+    
+    self.wifiReach = [Reachability reachabilityForLocalWiFi];
+    [self.wifiReach startNotifier];
+}
+
+- (void)reachabilityChanged:(NSNotification* )note {
+    Reachability *curReach = (Reachability *)[note object];
+    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+    NSLog(@"Reachability changed: %@", curReach);
+    networkStatus = [curReach currentReachabilityStatus];
+    
+    NSLog(@"=>%i", networkStatus);
+    
+    /*MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    
+	// Configure for text only and offset down
+	hud.mode = MBProgressHUDModeText;
+	hud.labelText = @"Some message...";
+	hud.margin = 10.f;
+	hud.yOffset = 150.f;
+	hud.removeFromSuperViewOnHide = YES;
+    
+	[hud hide:YES afterDelay:3];*/
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

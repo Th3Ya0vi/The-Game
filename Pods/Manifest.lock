@@ -4,19 +4,25 @@ PODS:
   - JSONKit (1.5pre)
   - LRResty (0.11.0):
     - NSData+Base64 (~> 1.0)
+  - MBProgressHUD (0.7)
   - NSData+Base64 (1.0.0)
+  - Reachability (3.1.0)
 
 DEPENDENCIES:
   - ABMultiton
   - EasyMapping
   - JSONKit
   - LRResty
+  - MBProgressHUD
+  - Reachability
 
 SPEC CHECKSUMS:
   ABMultiton: b0a22178919b139e0b3921825ace1b36ca8e8b91
   EasyMapping: 9e23ea67fb60bcb1761e5972ef62a08a03758f50
   JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
   LRResty: 5e4c1b91bc5f878d64e965facd5cc9320b9ed3e2
+  MBProgressHUD: 1fd8591a2216d5dec6de24e09187bb03bcbe9946
   NSData+Base64: 36c4e5b6479259c1a68866ccd2a8dd385c9744f7
+  Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
 
 COCOAPODS: 0.19.1

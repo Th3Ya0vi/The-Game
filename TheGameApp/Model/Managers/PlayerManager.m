@@ -23,7 +23,7 @@
 -(void) connectPlayer
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:@"1234567" forKey:@"access_token"];
+    [params setObject:[NSNumber numberWithInteger:43210] forKey:@"access_token"];
     [params setObject:@"dd@m.ru" forKey:@"email"];
     [params setObject:@"DD" forKey:@"name"];
     

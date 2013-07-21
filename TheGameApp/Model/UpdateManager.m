@@ -66,7 +66,6 @@
         NSLog(@"->%@", resultJSON);
         
     } andFailedBlock:^{
-        NSLog(@"ERROR");
         [self raiseNotification:didUploadServerSessionNotification WithObject:notifyParam];
     }];
     
