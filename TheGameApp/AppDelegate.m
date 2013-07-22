@@ -10,7 +10,11 @@
 #import <Reachability/Reachability.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 
+#import "TGWelcomeViewController.h"
+
 @interface AppDelegate ()
+
+@property (nonatomic, strong) TGWelcomeViewController *welcomeViewController;
 
 @property (nonatomic, strong) Reachability *hostReach;
 @property (nonatomic, strong) Reachability *internetReach;
@@ -19,6 +23,8 @@
 @end
 
 @implementation AppDelegate
+@synthesize welcomeViewController;
+
 @synthesize hostReach;
 @synthesize internetReach;
 @synthesize wifiReach;
@@ -37,7 +43,12 @@
     [[PlayerManager sharedInstance] connectPlayer];
     [[PlayerManager sharedInstance] listOfPlayers];
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.welcomeViewController = [[TGWelcomeViewController alloc] init];
+    
+    self.rootNavController = [[UINavigationController alloc] initWithRootViewController:self.welcomeViewController];
+    self.rootNavController.navigationBarHidden = YES;
+    
+    self.window.rootViewController = self.rootNavController;
     [self.window makeKeyAndVisible];
     
     return YES;

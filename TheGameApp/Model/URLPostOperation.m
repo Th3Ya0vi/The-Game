@@ -72,12 +72,13 @@
     [[LRResty client] post:urlString payload:parameters headers:nil withBlock:^(LRRestyResponse *response) {
         if(response.status == 200)  {
             
-            //NSLog(@"%@", response.asString);
+            NSLog(@"-->%@", response.description);
             [self finish];
             successBlockDownloader(response);
         }
         else
         {
+            NSLog(@"ERROR POST: %@", response.asString);
             [self finish];
             failedBlockDownloader();
         }
