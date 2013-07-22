@@ -11,6 +11,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 
 #import "TGWelcomeViewController.h"
+#import "TGLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -85,6 +86,12 @@
 	hud.removeFromSuperViewOnHide = YES;
     
 	[hud hide:YES afterDelay:3];*/
+}
+
+- (void)presentLoginViewControllerAnimated:(BOOL)animated {
+    TGLoginViewController *loginViewController = [[TGLoginViewController alloc] init];
+    
+    [self.welcomeViewController presentModalViewController:loginViewController animated:NO];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

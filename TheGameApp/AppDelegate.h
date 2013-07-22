@@ -23,4 +23,6 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+- (void)presentLoginViewControllerAnimated:(BOOL)animated;
+
 @end

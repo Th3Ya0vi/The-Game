@@ -35,6 +35,8 @@
 		18A09060179BDFED0015C0F2 /* URLPostOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0905F179BDFEC0015C0F2 /* URLPostOperation.m */; };
 		18A09066179C3C400015C0F2 /* TGWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A09064179C3C400015C0F2 /* TGWelcomeViewController.m */; };
 		18A09067179C3C400015C0F2 /* TGWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A09065179C3C400015C0F2 /* TGWelcomeViewController.xib */; };
+		18A0906B179CD3500015C0F2 /* TGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A09069179CD3500015C0F2 /* TGLoginViewController.m */; };
+		18A0906C179CD3500015C0F2 /* TGLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A0906A179CD3500015C0F2 /* TGLoginViewController.xib */; };
 		C20A4058BB664D5D9CFAFAA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C714244865647658236073E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,9 @@
 		18A09063179C3C400015C0F2 /* TGWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGWelcomeViewController.h; sourceTree = "<group>"; };
 		18A09064179C3C400015C0F2 /* TGWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGWelcomeViewController.m; sourceTree = "<group>"; };
 		18A09065179C3C400015C0F2 /* TGWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGWelcomeViewController.xib; sourceTree = "<group>"; };
+		18A09068179CD3500015C0F2 /* TGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGLoginViewController.h; sourceTree = "<group>"; };
+		18A09069179CD3500015C0F2 /* TGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGLoginViewController.m; sourceTree = "<group>"; };
+		18A0906A179CD3500015C0F2 /* TGLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGLoginViewController.xib; sourceTree = "<group>"; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E0D513488642B9807A972B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -280,6 +285,9 @@
 				18A09063179C3C400015C0F2 /* TGWelcomeViewController.h */,
 				18A09064179C3C400015C0F2 /* TGWelcomeViewController.m */,
 				18A09065179C3C400015C0F2 /* TGWelcomeViewController.xib */,
+				18A09068179CD3500015C0F2 /* TGLoginViewController.h */,
+				18A09069179CD3500015C0F2 /* TGLoginViewController.m */,
+				18A0906A179CD3500015C0F2 /* TGLoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 				18A0901C179BBCDD0015C0F2 /* Default@2x.png in Resources */,
 				18A0901E179BBCDD0015C0F2 /* Default-568h@2x.png in Resources */,
 				18A09067179C3C400015C0F2 /* TGWelcomeViewController.xib in Resources */,
+				18A0906C179CD3500015C0F2 /* TGLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +446,7 @@
 				18A0905D179BDA2E0015C0F2 /* PlayerManager.m in Sources */,
 				18A09060179BDFED0015C0F2 /* URLPostOperation.m in Sources */,
 				18A09066179C3C400015C0F2 /* TGWelcomeViewController.m in Sources */,
+				18A0906B179CD3500015C0F2 /* TGLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,10 +548,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3E0D513488642B9807A972B /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheGameApp/TheGameApp-Prefix.pch";
 				INFOPLIST_FILE = "TheGameApp/TheGameApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -550,10 +562,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3E0D513488642B9807A972B /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheGameApp/TheGameApp-Prefix.pch";
 				INFOPLIST_FILE = "TheGameApp/TheGameApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
