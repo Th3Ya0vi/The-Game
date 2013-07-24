@@ -1,19 +1,18 @@
 //
-//  TGWelcomeViewController.m
+//  PreWizardAimController.m
 //  TheGameApp
 //
-//  Created by DenisDbv on 21.07.13.
+//  Created by denisdbv@gmail.com on 24.07.13.
 //  Copyright (c) 2013 axbx. All rights reserved.
 //
 
-#import "TGWelcomeViewController.h"
-#import "AppDelegate.h"
+#import "PreWizardAimController.h"
 
-@interface TGWelcomeViewController ()
+@interface PreWizardAimController ()
 
 @end
 
-@implementation TGWelcomeViewController
+@implementation PreWizardAimController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,11 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void) viewWillAppear:(BOOL)animated
-{
-    [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentLoginViewControllerAnimated:NO];
 }
 
 @end
