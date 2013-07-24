@@ -37,11 +37,11 @@
 		18A09067179C3C400015C0F2 /* TGWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A09065179C3C400015C0F2 /* TGWelcomeViewController.xib */; };
 		18A0906B179CD3500015C0F2 /* TGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A09069179CD3500015C0F2 /* TGLoginViewController.m */; };
 		18A0906C179CD3500015C0F2 /* TGLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A0906A179CD3500015C0F2 /* TGLoginViewController.xib */; };
-		7C4071B317A00D1B008EFF19 /* login-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4071B217A00D1B008EFF19 /* login-background@2x.png */; };
-		7C4071B817A01215008EFF19 /* PreWizardAimController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4071B617A01215008EFF19 /* PreWizardAimController.m */; };
-		7C4071B917A01215008EFF19 /* PreWizardAimController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4071B717A01215008EFF19 /* PreWizardAimController.xib */; };
-		7C4071BD17A012D3008EFF19 /* RootWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4071BB17A012D3008EFF19 /* RootWizardViewController.m */; };
-		7C4071BE17A012D3008EFF19 /* RootWizardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4071BC17A012D3008EFF19 /* RootWizardViewController.xib */; };
+		18A0907617A05FF30015C0F2 /* PreWizardAimController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0907117A05FF30015C0F2 /* PreWizardAimController.m */; };
+		18A0907717A05FF30015C0F2 /* PreWizardAimController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A0907217A05FF30015C0F2 /* PreWizardAimController.xib */; };
+		18A0907817A05FF30015C0F2 /* RootWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0907417A05FF30015C0F2 /* RootWizardViewController.m */; };
+		18A0907917A05FF30015C0F2 /* RootWizardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A0907517A05FF30015C0F2 /* RootWizardViewController.xib */; };
+		18A0907B17A060140015C0F2 /* login-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0907A17A060140015C0F2 /* login-background@2x.png */; };
 		C20A4058BB664D5D9CFAFAA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C714244865647658236073E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -101,14 +101,14 @@
 		18A09068179CD3500015C0F2 /* TGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGLoginViewController.h; sourceTree = "<group>"; };
 		18A09069179CD3500015C0F2 /* TGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGLoginViewController.m; sourceTree = "<group>"; };
 		18A0906A179CD3500015C0F2 /* TGLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGLoginViewController.xib; sourceTree = "<group>"; };
+		18A0907017A05FF30015C0F2 /* PreWizardAimController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreWizardAimController.h; path = TheGameApp/Controllers/AimCarousel/PreWizardAimController.h; sourceTree = SOURCE_ROOT; };
+		18A0907117A05FF30015C0F2 /* PreWizardAimController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreWizardAimController.m; path = TheGameApp/Controllers/AimCarousel/PreWizardAimController.m; sourceTree = SOURCE_ROOT; };
+		18A0907217A05FF30015C0F2 /* PreWizardAimController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreWizardAimController.xib; path = TheGameApp/Controllers/AimCarousel/PreWizardAimController.xib; sourceTree = SOURCE_ROOT; };
+		18A0907317A05FF30015C0F2 /* RootWizardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootWizardViewController.h; path = TheGameApp/Controllers/AimCarousel/RootWizardViewController.h; sourceTree = SOURCE_ROOT; };
+		18A0907417A05FF30015C0F2 /* RootWizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootWizardViewController.m; path = TheGameApp/Controllers/AimCarousel/RootWizardViewController.m; sourceTree = SOURCE_ROOT; };
+		18A0907517A05FF30015C0F2 /* RootWizardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RootWizardViewController.xib; path = TheGameApp/Controllers/AimCarousel/RootWizardViewController.xib; sourceTree = SOURCE_ROOT; };
+		18A0907A17A060140015C0F2 /* login-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-background@2x.png"; path = "TheGameApp/Resorces/login-background@2x.png"; sourceTree = SOURCE_ROOT; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C4071B217A00D1B008EFF19 /* login-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-background@2x.png"; sourceTree = "<group>"; };
-		7C4071B517A01215008EFF19 /* PreWizardAimController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreWizardAimController.h; sourceTree = "<group>"; };
-		7C4071B617A01215008EFF19 /* PreWizardAimController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreWizardAimController.m; sourceTree = "<group>"; };
-		7C4071B717A01215008EFF19 /* PreWizardAimController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreWizardAimController.xib; sourceTree = "<group>"; };
-		7C4071BA17A012D3008EFF19 /* RootWizardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootWizardViewController.h; sourceTree = "<group>"; };
-		7C4071BB17A012D3008EFF19 /* RootWizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootWizardViewController.m; sourceTree = "<group>"; };
-		7C4071BC17A012D3008EFF19 /* RootWizardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootWizardViewController.xib; sourceTree = "<group>"; };
 		C3E0D513488642B9807A972B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -309,7 +309,7 @@
 		7C4071B117A00CE7008EFF19 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
-				7C4071B217A00D1B008EFF19 /* login-background@2x.png */,
+				18A0907A17A060140015C0F2 /* login-background@2x.png */,
 			);
 			name = Resorces;
 			path = "../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Resorces";
@@ -318,12 +318,12 @@
 		7C4071B417A01097008EFF19 /* AimCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				7C4071B517A01215008EFF19 /* PreWizardAimController.h */,
-				7C4071B617A01215008EFF19 /* PreWizardAimController.m */,
-				7C4071B717A01215008EFF19 /* PreWizardAimController.xib */,
-				7C4071BA17A012D3008EFF19 /* RootWizardViewController.h */,
-				7C4071BB17A012D3008EFF19 /* RootWizardViewController.m */,
-				7C4071BC17A012D3008EFF19 /* RootWizardViewController.xib */,
+				18A0907017A05FF30015C0F2 /* PreWizardAimController.h */,
+				18A0907117A05FF30015C0F2 /* PreWizardAimController.m */,
+				18A0907217A05FF30015C0F2 /* PreWizardAimController.xib */,
+				18A0907317A05FF30015C0F2 /* RootWizardViewController.h */,
+				18A0907417A05FF30015C0F2 /* RootWizardViewController.m */,
+				18A0907517A05FF30015C0F2 /* RootWizardViewController.xib */,
 			);
 			name = AimCarousel;
 			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/AimCarousel";
@@ -408,9 +408,9 @@
 				18A0901E179BBCDD0015C0F2 /* Default-568h@2x.png in Resources */,
 				18A09067179C3C400015C0F2 /* TGWelcomeViewController.xib in Resources */,
 				18A0906C179CD3500015C0F2 /* TGLoginViewController.xib in Resources */,
-				7C4071B317A00D1B008EFF19 /* login-background@2x.png in Resources */,
-				7C4071B917A01215008EFF19 /* PreWizardAimController.xib in Resources */,
-				7C4071BE17A012D3008EFF19 /* RootWizardViewController.xib in Resources */,
+				18A0907717A05FF30015C0F2 /* PreWizardAimController.xib in Resources */,
+				18A0907917A05FF30015C0F2 /* RootWizardViewController.xib in Resources */,
+				18A0907B17A060140015C0F2 /* login-background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,8 +487,8 @@
 				18A09060179BDFED0015C0F2 /* URLPostOperation.m in Sources */,
 				18A09066179C3C400015C0F2 /* TGWelcomeViewController.m in Sources */,
 				18A0906B179CD3500015C0F2 /* TGLoginViewController.m in Sources */,
-				7C4071B817A01215008EFF19 /* PreWizardAimController.m in Sources */,
-				7C4071BD17A012D3008EFF19 /* RootWizardViewController.m in Sources */,
+				18A0907617A05FF30015C0F2 /* PreWizardAimController.m in Sources */,
+				18A0907817A05FF30015C0F2 /* RootWizardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

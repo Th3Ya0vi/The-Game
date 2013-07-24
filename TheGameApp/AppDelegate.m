@@ -41,7 +41,7 @@
     
     [self monitorReachability];
     
-    [[PlayerManager sharedInstance] connectPlayer];
+    [[PlayerManager sharedInstance] authPlayer];
     [[PlayerManager sharedInstance] listOfPlayers];
     
     self.welcomeViewController = [[TGWelcomeViewController alloc] init];

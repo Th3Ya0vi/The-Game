@@ -10,7 +10,7 @@
 
 @interface PlayerManager : UpdateManager <ABMultitonProtocol>
 
-- (void) connectPlayer;
+- (void) authPlayer;
 -(void) listOfPlayers;
 
 @end

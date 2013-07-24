@@ -20,19 +20,23 @@
     return [super init];
 }
 
--(void) connectPlayer
+-(void) authPlayer
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:[NSNumber numberWithInteger:43210] forKey:@"access_token"];
     [params setObject:@"dd@m.ru" forKey:@"email"];
     [params setObject:@"DD" forKey:@"name"];
     
-    [[UpdateManager sharedInstance] addOperationPostJSONByURL:kTGPlayerUrl params:params itSession:kTGPlayerConnect];
+    [[UpdateManager sharedInstance] addOperationPostJSONByURL:kTGPlayerUrl params:params itSession:kTGPlayerConnect withSuccessOperation:^(LRRestyResponse *response) {
+        //
+    } andFailedOperation:^(LRRestyResponse *response) {
+        //
+    }];
 }
 
 -(void) listOfPlayers
 {
-    [[UpdateManager sharedInstance] addOperationDownloadingJSONByURL:kTGPlayerUrl itSession:kTGPlayerGetList];
+    //[[UpdateManager sharedInstance] addOperationDownloadingJSONByURL:kTGPlayerUrl itSession:kTGPlayerGetList];
 }
 
 @end

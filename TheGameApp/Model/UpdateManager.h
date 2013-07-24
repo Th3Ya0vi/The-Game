@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <ABMultiton/ABMultiton.h>
 #import <ABMultiton/ABMultitonProtocol.h>
+#import <LRResty/LRResty.h>
+
+typedef void (^SuccessOperation)(LRRestyResponse *response);
+typedef void (^FailedOperation)(LRRestyResponse *response);
 
 @interface UpdateManager : NSObject <ABMultitonProtocol>
 {
@@ -16,7 +20,14 @@
     NSOperationQueue * _queueEntry;
 }
 
--(void) addOperationDownloadingJSONByURL:(NSString*)url itSession:(ServerSessionsList)sessionID;
--(void) addOperationPostJSONByURL:(NSString*)url params:(NSDictionary*)params itSession:(ServerSessionsList)sessionID;
+-(void) addOperationDownloadingJSONByURL:(NSString*)url
+                               itSession:(ServerSessionsList)sessionID
+                                withSuccessOperation:(SuccessOperation) succesOperaion
+                                andFailedOperation:(FailedOperation) failedOperation;
+
+-(void) addOperationPostJSONByURL:(NSString*)url params:(NSDictionary*)params
+                        itSession:(ServerSessionsList)sessionID
+                        withSuccessOperation:(SuccessOperation) succesOperaion
+                        andFailedOperation:(FailedOperation) failedOperation;
 
 @end

@@ -80,7 +80,7 @@
         {
             NSLog(@"ERROR POST: %@", response.asString);
             [self finish];
-            failedBlockDownloader();
+            failedBlockDownloader(response);
         }
     }];
 }

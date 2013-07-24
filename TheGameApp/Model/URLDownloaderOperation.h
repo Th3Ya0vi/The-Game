@@ -12,7 +12,7 @@
 #import <JSONKit/JSONKit.h>
 
 typedef void (^SuccessBlockDownloader)(LRRestyResponse *response);
-typedef void (^FailedBlockDownloader)(void);
+typedef void (^FailedBlockDownloader)(LRRestyResponse *response);
 
 @interface URLDownloaderOperation : NSOperation
 {

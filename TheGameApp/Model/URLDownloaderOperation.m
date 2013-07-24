@@ -80,7 +80,7 @@
         {
             //NSLog(@"%@", response.asString);
             [self finish];
-            failedBlockDownloader();
+            failedBlockDownloader(response);
         }
     }];
 }
