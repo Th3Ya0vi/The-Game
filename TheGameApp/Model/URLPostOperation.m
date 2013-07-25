@@ -16,9 +16,11 @@
 
 @synthesize url = _url;
 @synthesize param = _param;
+@synthesize header = _header;
 
 - (id)initWithUrlString:(NSString *)urlPath
-               andParam:(NSDictionary*)params
+               andParam:(id)params
+              andHeader:(id)headers
        withSuccessBlock:(SuccessBlockDownloader) succesBlock
          andFailedBlock:(FailedBlockDownloader) failedBlock
 {
@@ -28,6 +30,8 @@
     
     _url = [urlPath copy];
     _param = [params copy];
+    _header = [headers copy];
+    
     successBlockDownloader = [succesBlock copy];
     failedBlockDownloader = [failedBlock copy];
     
@@ -50,7 +54,7 @@
     _isExecuting = YES;
     [self didChangeValueForKey:@"isExecuting"];
     
-    [self entryJSONToUrl:_url param:_param];
+    [self entryJSONToUrl:_url param:_param header:_header];
 }
 
 - (void)finish
@@ -67,18 +71,16 @@
     [self didChangeValueForKey:@"isFinished"];
 }
 
--(void) entryJSONToUrl:(NSString*)urlString param:(NSDictionary*)parameters
+-(void) entryJSONToUrl:(NSString*)urlString param:(id)parameters header:(id)headers
 {
-    [[LRResty client] post:urlString payload:parameters headers:nil withBlock:^(LRRestyResponse *response) {
+    [[LRResty client] post:urlString payload:parameters headers:headers withBlock:^(LRRestyResponse *response) {
         if(response.status == 200)  {
             
-            NSLog(@"-->%@", response.description);
             [self finish];
             successBlockDownloader(response);
         }
         else
         {
-            NSLog(@"ERROR POST: %@", response.asString);
             [self finish];
             failedBlockDownloader(response);
         }

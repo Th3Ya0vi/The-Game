@@ -18,6 +18,7 @@ typedef void (^FailedOperation)(LRRestyResponse *response);
 {
     NSOperationQueue * _queueReceive;
     NSOperationQueue * _queueEntry;
+    NSOperationQueue * _queueEntryData;
 }
 
 -(void) addOperationDownloadingJSONByURL:(NSString*)url
@@ -29,5 +30,12 @@ typedef void (^FailedOperation)(LRRestyResponse *response);
                         itSession:(ServerSessionsList)sessionID
                         withSuccessOperation:(SuccessOperation) succesOperaion
                         andFailedOperation:(FailedOperation) failedOperation;
+
+-(void) addOperationPostDataByURL:(NSString*)url
+                           params:(id)data
+                          headers:(id)header
+                        itSession:(ServerSessionsList)sessionID
+             withSuccessOperation:(SuccessOperation) succesOperaion
+               andFailedOperation:(FailedOperation) failedOperation;
 
 @end

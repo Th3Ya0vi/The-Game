@@ -39,4 +39,33 @@
     //[[UpdateManager sharedInstance] addOperationDownloadingJSONByURL:kTGPlayerUrl itSession:kTGPlayerGetList];
 }
 
+-(void) uploadBinaryFile
+{
+    UIImage *testImage = [UIImage imageNamed:@"login-background@2x.png"];
+    
+    NSString *boundary = @"----WebKitFormBoundarycC4YiaUFwM44F6rT";
+    
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
+    NSDictionary *requestHeaders = [NSDictionary
+                                    dictionaryWithObject: contentType forKey:@"Content-Type"];
+    
+    NSMutableData *body = [NSMutableData data];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+	
+    [body appendData:[@"Content-Disposition: form-data; name=\"data\"; filename=\"picture.png\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [body appendData:[@"Content-Type: image/png\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [body appendData:[NSData dataWithData:UIImagePNGRepresentation(testImage)]];
+    
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+
+    [[UpdateManager sharedInstance] addOperationPostDataByURL:kTGImageUploadUrl params:body headers:requestHeaders itSession:kTGImageUpload withSuccessOperation:^(LRRestyResponse *response)
+    {
+        NSLog(@"SUCCESS: %@", response.asString);
+    } andFailedOperation:^(LRRestyResponse *response) {
+        NSLog(@"ERROR: %@", response.asString);
+    }];
+}
+
 @end

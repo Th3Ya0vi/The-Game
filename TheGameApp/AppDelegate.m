@@ -41,8 +41,7 @@
     
     [self monitorReachability];
     
-    [[PlayerManager sharedInstance] authPlayer];
-    [[PlayerManager sharedInstance] listOfPlayers];
+    [[PlayerManager sharedInstance] uploadBinaryFile];
     
     self.welcomeViewController = [[TGWelcomeViewController alloc] init];
     

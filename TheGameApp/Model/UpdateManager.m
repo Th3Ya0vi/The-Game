@@ -25,6 +25,9 @@
     _queueEntry = [[NSOperationQueue alloc] init];
     [_queueEntry setMaxConcurrentOperationCount:1];
     
+    _queueEntryData = [[NSOperationQueue alloc] init];
+    [_queueEntryData setMaxConcurrentOperationCount:1];
+    
     return [super init];
 }
 
@@ -67,10 +70,12 @@
     
     [self raiseNotification:willUploadServerSessionNotification WithObject:notifyParam];
     
-    URLPostOperation * operation = [[URLPostOperation alloc] initWithUrlString:url andParam:params withSuccessBlock:^(LRRestyResponse *response) {
-        
+    URLPostOperation * operation = [[URLPostOperation alloc] initWithUrlString:url andParam:params andHeader:nil withSuccessBlock:^(LRRestyResponse *response) {
+    
         [notifyParam setObject:[NSNumber numberWithBool:YES] forKey:kTGSessionStatusKey];
         [self raiseNotification:didUploadServerSessionNotification WithObject:notifyParam];
+        
+        succesOperaion(response);
         
         //JSONKit
         //NSDictionary *resultJSON = [[response asString] objectFromJSONString];
@@ -84,6 +89,35 @@
     }];
     
     [_queueReceive addOperation:operation];
+}
+
+-(void) addOperationPostDataByURL:(NSString*)url
+                           params:(id)data
+                           headers:(id)header
+                        itSession:(ServerSessionsList)sessionID
+             withSuccessOperation:(SuccessOperation) succesOperaion
+               andFailedOperation:(FailedOperation) failedOperation
+{
+    NSMutableDictionary *notifyParam = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:sessionID], kTGSessionNameKey, nil];
+    
+    [self raiseNotification:willUploadServerSessionNotification WithObject:notifyParam];
+    
+    URLPostOperation * operation = [[URLPostOperation alloc] initWithUrlString:url andParam:data andHeader:header withSuccessBlock:^(LRRestyResponse *response) {
+        
+        //[notifyParam setObject:[NSNumber numberWithBool:YES] forKey:kTGSessionStatusKey];
+        [self raiseNotification:didUploadServerSessionNotification WithObject:notifyParam];
+        
+        succesOperaion(response);
+        
+    } andFailedBlock:^(LRRestyResponse *response){
+        
+        //[notifyParam setObject:[NSNumber numberWithBool:NO] forKey:kTGSessionStatusKey];
+        [self raiseNotification:didUploadServerSessionNotification WithObject:notifyParam];
+        
+        failedOperation(response);
+    }];
+    
+    [_queueEntryData addOperation:operation];
 }
 
 @end

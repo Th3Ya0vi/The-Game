@@ -12,5 +12,6 @@
 
 - (void) authPlayer;
 -(void) listOfPlayers;
+-(void) uploadBinaryFile;
 
 @end

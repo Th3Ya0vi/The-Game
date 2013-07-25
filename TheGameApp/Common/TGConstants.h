@@ -11,7 +11,9 @@
 
 typedef enum {
     kTGPlayerConnect = 1,
-    kTGPlayerGetList
+    kTGPlayerGetList,
+    kTGImageUpload,
+    kTGVideoUpload
 } ServerSessionsList;
 
 // Ключи для словаря информации пользователя при регистрации
@@ -30,3 +32,4 @@ extern NSString *const kTGSessionStatusKey;
 // API
 extern NSString *const kTGHostName;
 extern NSString *const kTGPlayerUrl;
+extern NSString *const kTGImageUploadUrl;

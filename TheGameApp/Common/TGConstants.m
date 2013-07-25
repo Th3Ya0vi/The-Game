@@ -21,3 +21,4 @@ NSString *const kTGSessionStatusKey = @"session_status";
 
 NSString *const kTGHostName = @"http://kostum5.ru";
 NSString *const kTGPlayerUrl = @"http://thegame.radanisk.com/players/";
+NSString *const kTGImageUploadUrl = @"http://kostum5.ru/api/add_photo";

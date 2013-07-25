@@ -17,20 +17,23 @@ typedef void (^FailedBlockDownloader)(LRRestyResponse *response);
 @interface URLPostOperation : NSOperation
 {
     NSString *url;
-    NSDictionary *param;
+    id param;
+    id header;
     
     BOOL _isExecuting;
     BOOL _isFinished;
 }
 
 @property (readonly, copy) NSString *url;
-@property (readonly, copy) NSDictionary *param;
+@property (readonly, copy) id param;
+@property (readonly, copy) id header;
 
 @property (readonly) BOOL isExecuting;
 @property (readonly) BOOL isFinished;
 
 - (id)initWithUrlString:(NSString *)urlPath
-               andParam:(NSDictionary*)params
+               andParam:(id)params
+              andHeader:(id)headers
        withSuccessBlock:(SuccessBlockDownloader) succesBlock
          andFailedBlock:(FailedBlockDownloader) failedBlock;
 
