@@ -42,6 +42,7 @@
 		18A0907817A05FF30015C0F2 /* RootWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0907417A05FF30015C0F2 /* RootWizardViewController.m */; };
 		18A0907917A05FF30015C0F2 /* RootWizardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A0907517A05FF30015C0F2 /* RootWizardViewController.xib */; };
 		18A0907B17A060140015C0F2 /* login-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0907A17A060140015C0F2 /* login-background@2x.png */; };
+		7CE0CFC217A29F9D005553E4 /* AimEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0CFC117A29F9D005553E4 /* AimEditView.m */; };
 		C20A4058BB664D5D9CFAFAA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C714244865647658236073E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,8 @@
 		18A0907517A05FF30015C0F2 /* RootWizardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RootWizardViewController.xib; path = TheGameApp/Controllers/AimCarousel/RootWizardViewController.xib; sourceTree = SOURCE_ROOT; };
 		18A0907A17A060140015C0F2 /* login-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-background@2x.png"; path = "TheGameApp/Resorces/login-background@2x.png"; sourceTree = SOURCE_ROOT; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE0CFC017A29F9D005553E4 /* AimEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AimEditView.h; sourceTree = "<group>"; };
+		7CE0CFC117A29F9D005553E4 /* AimEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AimEditView.m; sourceTree = "<group>"; };
 		C3E0D513488642B9807A972B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -175,6 +178,7 @@
 		18A0900D179BBCDD0015C0F2 /* TheGameApp */ = {
 			isa = PBXGroup;
 			children = (
+				7CE0CFBE17A29EEA005553E4 /* Views */,
 				7C4071B117A00CE7008EFF19 /* Resorces */,
 				18A09061179C36830015C0F2 /* Controllers */,
 				18A0904D179BD5080015C0F2 /* Common */,
@@ -327,6 +331,24 @@
 			);
 			name = AimCarousel;
 			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/AimCarousel";
+			sourceTree = "<group>";
+		};
+		7CE0CFBE17A29EEA005553E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CE0CFBF17A29F48005553E4 /* AimFormView */,
+			);
+			name = Views;
+			path = "../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Views";
+			sourceTree = "<group>";
+		};
+		7CE0CFBF17A29F48005553E4 /* AimFormView */ = {
+			isa = PBXGroup;
+			children = (
+				7CE0CFC017A29F9D005553E4 /* AimEditView.h */,
+				7CE0CFC117A29F9D005553E4 /* AimEditView.m */,
+			);
+			path = AimFormView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +511,7 @@
 				18A0906B179CD3500015C0F2 /* TGLoginViewController.m in Sources */,
 				18A0907617A05FF30015C0F2 /* PreWizardAimController.m in Sources */,
 				18A0907817A05FF30015C0F2 /* RootWizardViewController.m in Sources */,
+				7CE0CFC217A29F9D005553E4 /* AimEditView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

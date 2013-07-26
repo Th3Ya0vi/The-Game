@@ -10,4 +10,6 @@
 
 @interface RootWizardViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollContainerForAims;
+
 @end
