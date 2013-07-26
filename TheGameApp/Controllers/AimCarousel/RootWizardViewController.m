@@ -26,11 +26,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBarHidden = NO;
+    
+    UIBarButtonItem *onNextPageButton = [[UIBarButtonItem alloc] initWithTitle:@">" style:UIBarButtonItemStyleBordered target:self action:@selector(onNextPage)];
+    [self.navigationItem setRightBarButtonItem:onNextPageButton animated:YES];
+    
+    UIBarButtonItem *onCancelButton = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStyleBordered target:self action:@selector(onCancel)];
+    [self.navigationItem setLeftBarButtonItem:onCancelButton animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+-(void) onNextPage
+{
+    //
+}
+
+-(void) onCancel
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

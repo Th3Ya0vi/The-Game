@@ -12,10 +12,12 @@
 
 #import "TGWelcomeViewController.h"
 #import "TGLoginViewController.h"
+#import "PreWizardAimController.h"
 
 @interface AppDelegate ()
 
 @property (nonatomic, strong) TGWelcomeViewController *welcomeViewController;
+@property (nonatomic, strong) PreWizardAimController *wizardViewController;
 
 @property (nonatomic, strong) Reachability *hostReach;
 @property (nonatomic, strong) Reachability *internetReach;
@@ -24,7 +26,9 @@
 @end
 
 @implementation AppDelegate
+
 @synthesize welcomeViewController;
+@synthesize wizardViewController;
 
 @synthesize hostReach;
 @synthesize internetReach;
@@ -91,6 +95,12 @@
     TGLoginViewController *loginViewController = [[TGLoginViewController alloc] init];
     
     [self.welcomeViewController presentModalViewController:loginViewController animated:NO];
+}
+
+- (void)presentAimWizardViewControllerAnimated:(BOOL)animated   {
+    wizardViewController = [[PreWizardAimController alloc] init];
+    
+    [self.welcomeViewController presentModalViewController:[[UINavigationController alloc] initWithRootViewController:wizardViewController] animated:NO];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

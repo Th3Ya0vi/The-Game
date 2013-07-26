@@ -7,12 +7,14 @@
 //
 
 #import "PreWizardAimController.h"
+#import "RootWizardViewController.h"
 
 @interface PreWizardAimController ()
-
+@property (nonatomic, strong) RootWizardViewController *rootWizardViewController;
 @end
 
 @implementation PreWizardAimController
+@synthesize rootWizardViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,13 +28,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+-(IBAction) addAims:(id)sender
+{
+    rootWizardViewController = [[RootWizardViewController alloc] init];
+    
+    [self.navigationController pushViewController:rootWizardViewController animated:YES];
 }
 
 @end

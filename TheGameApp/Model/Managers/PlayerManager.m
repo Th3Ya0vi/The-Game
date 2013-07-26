@@ -20,23 +20,29 @@
     return [super init];
 }
 
--(void) authPlayer
+-(void) authPlayerByToken:(NSString*)access_token
+            bySocialIndex:(SocialIndex)socialIndex
+                   byName:(NSString*)name
+                  byEmail:(NSString*)email
+                byCountry:(NSString*)country
+                   byCity:(NSString*)city
+               byPhotoUrl:(NSString*)photoUrl
+
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:[NSNumber numberWithInteger:43210] forKey:@"access_token"];
-    [params setObject:@"dd@m.ru" forKey:@"email"];
-    [params setObject:@"DD" forKey:@"name"];
+    [params setObject:access_token forKey:kTGUserAccessTokenKey];
+    [params setObject:[NSNumber numberWithInteger:socialIndex] forKey:kTGUserSocialIDKey];
+    [params setObject:name forKey:kTGUserNameKey];
+    [params setObject:name forKey:kTGUserEmailKey];
+    [params setObject:name forKey:kTGUserCountryKey];
+    [params setObject:name forKey:kTGUserCityKey];
+    [params setObject:name forKey:kTGUserAvaKey];
     
     [[UpdateManager sharedInstance] addOperationPostJSONByURL:kTGPlayerUrl params:params itSession:kTGPlayerConnect withSuccessOperation:^(LRRestyResponse *response) {
         //
     } andFailedOperation:^(LRRestyResponse *response) {
         //
     }];
-}
-
--(void) listOfPlayers
-{
-    //[[UpdateManager sharedInstance] addOperationDownloadingJSONByURL:kTGPlayerUrl itSession:kTGPlayerGetList];
 }
 
 -(void) uploadBinaryFile

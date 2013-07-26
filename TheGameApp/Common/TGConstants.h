@@ -16,6 +16,12 @@ typedef enum {
     kTGVideoUpload
 } ServerSessionsList;
 
+typedef enum {
+    kTGSocialFacebookIndex = 1,
+    kTGSocialVKIndex,
+    kTGLivejournalIndex
+} SocialIndex;
+
 // Ключи для словаря информации пользователя при регистрации
 extern NSString *const kTGUserNameKey;
 extern NSString *const kTGUserEmailKey;

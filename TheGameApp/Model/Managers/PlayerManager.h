@@ -10,8 +10,14 @@
 
 @interface PlayerManager : UpdateManager <ABMultitonProtocol>
 
-- (void) authPlayer;
--(void) listOfPlayers;
+-(void) authPlayerByToken:(NSString*)access_token
+            bySocialIndex:(SocialIndex)socialIndex
+                   byName:(NSString*)name
+                  byEmail:(NSString*)email
+                byCountry:(NSString*)country
+                   byCity:(NSString*)city
+               byPhotoUrl:(NSString*)photoUrl;
+
 -(void) uploadBinaryFile;
 
 @end

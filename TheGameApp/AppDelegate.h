@@ -24,5 +24,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 - (void)presentLoginViewControllerAnimated:(BOOL)animated;
+- (void)presentAimWizardViewControllerAnimated:(BOOL)animated;
 
 @end
