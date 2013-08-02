@@ -20,6 +20,10 @@
         label.text = @"Hello!";
         [self addSubview:label];
         [label sizeToFit];
+        
+        label.frame = CGRectMake((self.frame.size.width-label.frame.size.width)/2, (self.frame.size.height-label.frame.size.height)/2, label.frame.size.width, label.frame.size.height);
+        
+        self.backgroundColor = [UIColor blackColor];
     }
     return self;
 }

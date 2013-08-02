@@ -41,7 +41,7 @@
     UIBarButtonItem *onCancelButton = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStyleBordered target:self action:@selector(onCancel)];
     [self.navigationItem setLeftBarButtonItem:onCancelButton animated:YES];
     
-    [self initCode];
+    [self performSelector:@selector(initCode)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,14 +53,25 @@
 {
     pageIndex = 0;
     
-    [self addAimPage];
+    for(int loop=0; loop<10; loop++)    {
+        [self addAimPage:loop];
+    }
 }
 
+-(void) addAimPage:(NSInteger)index
+{
+    AimEditView *aimPage = [[AimEditView alloc] initWithFrame:self.view.bounds];
+    aimPage.frame = CGRectMake(index*aimPage.frame.size.width, aimPage.frame.origin.y, aimPage.frame.size.width, aimPage.frame.size.height);
+    
+    scrollContainerForAims.contentSize = CGSizeMake( (index+1)*self.view.frame.size.width, self.view.bounds.size.height);
+    [scrollContainerForAims addSubview:aimPage];
+}
+
+#pragma mark -- Navigation controller buttons selectors
 -(void) onNextPage
 {
-    [self addAimPage];
-    
-    [self scrollToIndex: pageIndex-1];
+    pageIndex++;
+    [self scrollToPage: pageIndex animated:YES];
 }
 
 -(void) onCancel
@@ -68,24 +79,59 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void) scrollToIndex:(NSInteger)index
+-(void) scrollToPage:(NSInteger)page animated:(BOOL)animated
 {
-    if (index <= 0) {
-        index = 0;
+    if (page <= 0) {
+        page = 0;
+        pageIndex = 0;
+    } else if(page >= 9)    {
+        page = 9;
+        pageIndex = 9;
     }
     
-    [scrollContainerForAims scrollRectToVisible:CGRectMake(index * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.bounds.size.height) animated:YES];
+    [scrollContainerForAims scrollRectToVisible:CGRectMake(page * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.bounds.size.height) animated:animated];
 }
 
--(void) addAimPage
+-(int) getCurrentDisplayedPage
 {
-    AimEditView *aimPage = [[AimEditView alloc] initWithFrame:self.view.bounds];
-    aimPage.frame = CGRectMake(pageIndex*aimPage.frame.size.width, aimPage.frame.origin.y, aimPage.frame.size.width, aimPage.frame.size.height);
+    return scrollContainerForAims.contentOffset.x/self.view.frame.size.width;
+}
+
+-(int) getXPositionOfPage:(NSInteger)page
+{
+    return page * self.view.frame.size.width;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    int currentPage = [self getCurrentDisplayedPage];
     
-    scrollContainerForAims.contentSize = CGSizeMake( (pageIndex+1)*self.view.frame.size.width, self.view.bounds.size.height);
-    [scrollContainerForAims addSubview:aimPage];
+    pageIndex = currentPage;
     
-    pageIndex++;
+    double minimumZoom = 0.93;
+    double zoomSpeed = 1000;//increase this number to slow down the zoom
+    UIView *currentView = [scrollContainerForAims.subviews objectAtIndex:currentPage];
+    UIView *nextView;
+    if (currentPage < [scrollContainerForAims.subviews count]-1){
+        nextView = [scrollContainerForAims.subviews objectAtIndex:currentPage+1];
+    }
+    
+    //currentView zooms out as scroll left
+    int distanceFromPageOrigin = scrollContainerForAims.contentOffset.x - [self getXPositionOfPage:currentPage]; //find out how far the scroll is away from the start of the page, and use this to adjust the transform of the currentView
+    if (distanceFromPageOrigin < 0) {distanceFromPageOrigin = 0;}
+    double scaleAmount = 1-(distanceFromPageOrigin/zoomSpeed);
+    if (scaleAmount < minimumZoom ){scaleAmount = minimumZoom;}
+    currentView.transform = CGAffineTransformScale(CGAffineTransformIdentity, scaleAmount, scaleAmount);
+    
+    //nextView zooms in as scroll left
+    if (nextView != nil){
+        //find out how far the scroll is away from the start of the next page, and use this to adjust the transform of the nextView
+        distanceFromPageOrigin = (scrollContainerForAims.contentOffset.x - [self getXPositionOfPage:currentPage+1]) * -1;//multiply by minus 1 to get the distance to the next page (because otherwise the result would be -300 for example, as in 300 away from the next page)
+        if (distanceFromPageOrigin < 0) {distanceFromPageOrigin = 0;}
+        scaleAmount = 1-(distanceFromPageOrigin/zoomSpeed);
+        if (scaleAmount < minimumZoom ){scaleAmount = minimumZoom;}
+        nextView.transform = CGAffineTransformScale(CGAffineTransformIdentity, scaleAmount, scaleAmount);
+    }
 }
 
 @end
