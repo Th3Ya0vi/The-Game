@@ -7,6 +7,7 @@
 //
 
 #import "AimEditView.h"
+#import <SSToolkit/SSToolkit.h>
 
 @interface AimEditView()
 @property (nonatomic, retain) UITextField *aimTitleField;
@@ -27,6 +28,11 @@
     return self;
 }
 
+-(void) dissapearView
+{
+    [self stopObservingNotifications];
+}
+
 -(void) initView
 {
     aimTitleField = [[UITextField alloc] initWithFrame:CGRectMake(12, 15, self.frame.size.width-24-65, 25.0f)];
@@ -41,6 +47,10 @@
     aimTitleField.clearButtonMode = UITextFieldViewModeWhileEditing;
     aimTitleField.delegate = (id)self;
     [self addSubview: aimTitleField];
+    
+    SSLineView *lineView = [[SSLineView alloc] initWithFrame:CGRectMake(0, 55, self.frame.size.width, 2)];
+    lineView.lineColor = [UIColor whiteColor];
+    [self addSubview:lineView];
     
     aimTextView = [[UITextView alloc] initWithFrame:CGRectMake(12, 55, self.frame.size.width-24, self.frame.size.height)];
     aimTextView.backgroundColor = [UIColor clearColor];

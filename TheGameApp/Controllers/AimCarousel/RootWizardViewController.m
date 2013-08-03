@@ -16,6 +16,7 @@
 @implementation RootWizardViewController
 {
     NSInteger pageIndex;
+    UILabel *titleLabel;
 }
 
 @synthesize scrollContainerForAims;
@@ -41,7 +42,23 @@
     UIBarButtonItem *onCancelButton = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStyleBordered target:self action:@selector(onCancel)];
     [self.navigationItem setLeftBarButtonItem:onCancelButton animated:YES];
     
+    titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:19];
+    [self.navigationItem setTitleView: titleLabel];
+    
     [self performSelector:@selector(initCode)];
+}
+
+-(void) viewDidDisappear:(BOOL)animated
+{
+    for(AimEditView *subview in self.scrollContainerForAims.subviews)
+    {
+        if([subview isKindOfClass:[AimEditView class]]) {
+            [subview dissapearView];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,10 +69,17 @@
 -(void) initCode
 {
     pageIndex = 0;
+    [self setAimTitle];
     
     for(int loop=0; loop<10; loop++)    {
         [self addAimPage:loop];
     }
+}
+
+-(void) setAimTitle
+{
+    titleLabel.text = [NSString stringWithFormat:@"%i из 10", pageIndex+1];
+    [titleLabel sizeToFit];
 }
 
 -(void) addAimPage:(NSInteger)index
@@ -94,7 +118,7 @@
 
 -(int) getCurrentDisplayedPage
 {
-    return scrollContainerForAims.contentOffset.x/self.view.frame.size.width;
+    return floor(scrollContainerForAims.contentOffset.x/self.view.frame.size.width);
 }
 
 -(int) getXPositionOfPage:(NSInteger)page
@@ -107,9 +131,10 @@
     int currentPage = [self getCurrentDisplayedPage];
     
     pageIndex = currentPage;
+    [self setAimTitle];
     
     double minimumZoom = 0.93;
-    double zoomSpeed = 1000;//increase this number to slow down the zoom
+    double zoomSpeed = 1000; //increase this number to slow down the zoom
     UIView *currentView = [scrollContainerForAims.subviews objectAtIndex:currentPage];
     UIView *nextView;
     if (currentPage < [scrollContainerForAims.subviews count]-1){

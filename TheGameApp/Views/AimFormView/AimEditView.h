@@ -10,4 +10,6 @@
 
 @interface AimEditView : UIView
 
+-(void) dissapearView;
+
 @end
