@@ -8,6 +8,8 @@
 
 #import "AimEditView.h"
 #import <SSToolkit/SSToolkit.h>
+#import "TGPhotoArea.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface AimEditView()
 @property (nonatomic, retain) UITextField *aimTitleField;
@@ -21,7 +23,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login-background@2x.png"]];
+        self.backgroundColor = [UIColor whiteColor]; //[UIColor colorWithPatternImage:[UIImage imageNamed:@"login-background@2x.png"]];
         
         [self initView];
     }
@@ -38,7 +40,7 @@
     aimTitleField = [[UITextField alloc] initWithFrame:CGRectMake(12, 15, self.frame.size.width-24-65, 25.0f)];
     aimTitleField.backgroundColor = [UIColor clearColor];
     aimTitleField.textAlignment = NSTextAlignmentLeft;
-    aimTitleField.textColor = [UIColor whiteColor];
+    aimTitleField.textColor = [UIColor blackColor];
     aimTitleField.font = [UIFont fontWithName:@"HelveticaNeue" size:19];
     aimTitleField.placeholder = @"Введите цель";
     aimTitleField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -48,14 +50,17 @@
     aimTitleField.delegate = (id)self;
     [self addSubview: aimTitleField];
     
+    TGPhotoArea *photo = [[TGPhotoArea alloc] initWithImage:nil byFrame:CGRectMake(self.frame.size.width-45-10, (55-45)/2, 45, 45)];
+    [self addSubview:photo];
+    
     SSLineView *lineView = [[SSLineView alloc] initWithFrame:CGRectMake(0, 55, self.frame.size.width, 2)];
-    lineView.lineColor = [UIColor whiteColor];
+    lineView.lineColor = [UIColor lightGrayColor];
     [self addSubview:lineView];
     
     aimTextView = [[UITextView alloc] initWithFrame:CGRectMake(12, 55, self.frame.size.width-24, self.frame.size.height)];
     aimTextView.backgroundColor = [UIColor clearColor];
     aimTextView.font = [UIFont fontWithName:@"HelveticaNeue" size:19];
-    aimTextView.textColor = [UIColor whiteColor];
+    aimTextView.textColor = [UIColor blackColor];
     aimTextView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     aimTextView.autocorrectionType = UITextAutocorrectionTypeNo;
     aimTextView.returnKeyType = UIReturnKeyDefault;

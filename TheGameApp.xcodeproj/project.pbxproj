@@ -43,6 +43,9 @@
 		18A0907917A05FF30015C0F2 /* RootWizardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A0907517A05FF30015C0F2 /* RootWizardViewController.xib */; };
 		18A0907B17A060140015C0F2 /* login-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0907A17A060140015C0F2 /* login-background@2x.png */; };
 		18A0908017A97C910015C0F2 /* AimEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0907F17A97C910015C0F2 /* AimEditView.m */; };
+		18A0908517AD00C60015C0F2 /* cross-icon-big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0908417AD00C60015C0F2 /* cross-icon-big@2x.png */; };
+		18A0908917AD04640015C0F2 /* TGPhotoArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0908817AD04640015C0F2 /* TGPhotoArea.m */; };
+		18A0908B17AD0E720015C0F2 /* photo-icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0908A17AD0E720015C0F2 /* photo-icon-small@2x.png */; };
 		C20A4058BB664D5D9CFAFAA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C714244865647658236073E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +114,10 @@
 		18A0907A17A060140015C0F2 /* login-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-background@2x.png"; path = "TheGameApp/Resorces/login-background@2x.png"; sourceTree = SOURCE_ROOT; };
 		18A0907E17A97C910015C0F2 /* AimEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AimEditView.h; path = TheGameApp/Views/AimFormView/AimEditView.h; sourceTree = SOURCE_ROOT; };
 		18A0907F17A97C910015C0F2 /* AimEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AimEditView.m; path = TheGameApp/Views/AimFormView/AimEditView.m; sourceTree = SOURCE_ROOT; };
+		18A0908417AD00C60015C0F2 /* cross-icon-big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cross-icon-big@2x.png"; path = "TheGameApp/Resorces/cross-icon-big@2x.png"; sourceTree = SOURCE_ROOT; };
+		18A0908717AD04640015C0F2 /* TGPhotoArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGPhotoArea.h; sourceTree = "<group>"; };
+		18A0908817AD04640015C0F2 /* TGPhotoArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGPhotoArea.m; sourceTree = "<group>"; };
+		18A0908A17AD0E720015C0F2 /* photo-icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "photo-icon-small@2x.png"; path = "TheGameApp/Resorces/photo-icon-small@2x.png"; sourceTree = SOURCE_ROOT; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E0D513488642B9807A972B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -310,9 +317,21 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		18A0908617AD04460015C0F2 /* TGPhotoArea */ = {
+			isa = PBXGroup;
+			children = (
+				18A0908717AD04640015C0F2 /* TGPhotoArea.h */,
+				18A0908817AD04640015C0F2 /* TGPhotoArea.m */,
+			);
+			name = TGPhotoArea;
+			path = TheGameApp/Views/TGPhotoArea;
+			sourceTree = SOURCE_ROOT;
+		};
 		7C4071B117A00CE7008EFF19 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				18A0908A17AD0E720015C0F2 /* photo-icon-small@2x.png */,
+				18A0908417AD00C60015C0F2 /* cross-icon-big@2x.png */,
 				18A0907A17A060140015C0F2 /* login-background@2x.png */,
 			);
 			name = Resorces;
@@ -336,6 +355,7 @@
 		7CE0CFBE17A29EEA005553E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18A0908617AD04460015C0F2 /* TGPhotoArea */,
 				7CE0CFBF17A29F48005553E4 /* AimFormView */,
 			);
 			name = Views;
@@ -433,6 +453,8 @@
 				18A0907717A05FF30015C0F2 /* PreWizardAimController.xib in Resources */,
 				18A0907917A05FF30015C0F2 /* RootWizardViewController.xib in Resources */,
 				18A0907B17A060140015C0F2 /* login-background@2x.png in Resources */,
+				18A0908517AD00C60015C0F2 /* cross-icon-big@2x.png in Resources */,
+				18A0908B17AD0E720015C0F2 /* photo-icon-small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +534,7 @@
 				18A0907617A05FF30015C0F2 /* PreWizardAimController.m in Sources */,
 				18A0907817A05FF30015C0F2 /* RootWizardViewController.m in Sources */,
 				18A0908017A97C910015C0F2 /* AimEditView.m in Sources */,
+				18A0908917AD04640015C0F2 /* TGPhotoArea.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
