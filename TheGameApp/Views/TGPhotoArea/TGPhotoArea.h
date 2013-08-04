@@ -18,4 +18,6 @@
 
 -(id) initWithImage:(UIImage*)image byFrame:(CGRect)frame;
 
+-(void) updateImageByPath:(NSString*)url;
+
 @end

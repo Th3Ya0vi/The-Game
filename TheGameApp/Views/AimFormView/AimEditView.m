@@ -8,16 +8,21 @@
 
 #import "AimEditView.h"
 #import <SSToolkit/SSToolkit.h>
-#import "TGPhotoArea.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TGImagePickerController.h"
+#import "UIView+ViewController.h"
+#import "TGPhotoEditViewController.h"
 
 @interface AimEditView()
+@property (nonatomic, retain) TGImagePickerController *imagePickerController;
 @property (nonatomic, retain) UITextField *aimTitleField;
 @property (nonatomic, retain) UITextView *aimTextView;
+@property (nonatomic, retain) TGPhotoArea *photo;
 @end
 
 @implementation AimEditView
-@synthesize aimTitleField, aimTextView;
+@synthesize imagePickerController;
+@synthesize aimTitleField, aimTextView, photo;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -50,7 +55,8 @@
     aimTitleField.delegate = (id)self;
     [self addSubview: aimTitleField];
     
-    TGPhotoArea *photo = [[TGPhotoArea alloc] initWithImage:nil byFrame:CGRectMake(self.frame.size.width-45-10, (55-45)/2, 45, 45)];
+    photo = [[TGPhotoArea alloc] initWithImage:nil byFrame:CGRectMake(self.frame.size.width-45-10, (55-45)/2, 45, 45)];
+    photo.delegate = (id)self;
     [self addSubview:photo];
     
     SSLineView *lineView = [[SSLineView alloc] initWithFrame:CGRectMake(0, 55, self.frame.size.width, 2)];
@@ -113,6 +119,34 @@
     }
     
     return YES;
+}
+
+-(void) didClickOnPhotoArea:(UIView *)boxView
+{
+    imagePickerController = [[TGImagePickerController alloc] initWithStatus:kImagePickerOnlyPhoto];
+    imagePickerController.tgDelegate = (id)self;
+}
+
+-(void) imagePickerActionSheetClick:(ActionSheetIndex)index
+{
+    [self.appName_viewController presentViewController:imagePickerController animated:YES completion:nil];
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    TGPhotoEditViewController *editViewController = [[TGPhotoEditViewController alloc] initWithDictionary:info];
+    editViewController.delegate = (id)self;
+    [editViewController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    
+    [self.appName_viewController.navigationController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self.appName_viewController.navigationController pushViewController:editViewController animated:NO];
+}
+
+-(void) addDataFromPhotoEdit:(ALAsset*)asset
+{
+    NSString *assetURL = [asset.defaultRepresentation.url absoluteString];
+    
+    [photo updateImageByPath:assetURL];
 }
 
 @end

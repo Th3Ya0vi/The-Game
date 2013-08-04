@@ -8,8 +8,15 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>iPad-Retina-copy.png</string>
+		<string>iPad-Retina.png</string>
+		<string>iPhone-Retina.png</string>
+		<string>Settings-Retina.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.brandymint</string>
+	<string>com.brandymint.</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

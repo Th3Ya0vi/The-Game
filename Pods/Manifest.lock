@@ -1,6 +1,8 @@
 PODS:
   - ABMultiton (1.2.1)
   - EasyMapping (0.4.6)
+  - GPUImage (0.1.0)
+  - HRCoder (1.2.2)
   - JSONKit (1.5pre)
   - LRResty (0.11.0):
     - NSData+Base64 (~> 1.0)
@@ -12,6 +14,8 @@ PODS:
 DEPENDENCIES:
   - ABMultiton
   - EasyMapping
+  - GPUImage
+  - HRCoder
   - JSONKit
   - LRResty
   - MBProgressHUD
@@ -21,6 +25,8 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ABMultiton: b0a22178919b139e0b3921825ace1b36ca8e8b91
   EasyMapping: 9e23ea67fb60bcb1761e5972ef62a08a03758f50
+  GPUImage: 5b902c1df2afe0ac30a8e3e7379f9c0bb25c7c85
+  HRCoder: 686700a4246e96844cc898052da171229ee5f65d
   JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
   LRResty: 5e4c1b91bc5f878d64e965facd5cc9320b9ed3e2
   MBProgressHUD: 1fd8591a2216d5dec6de24e09187bb03bcbe9946

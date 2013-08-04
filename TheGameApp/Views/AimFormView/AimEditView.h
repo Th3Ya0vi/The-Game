@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TGPhotoArea.h"
+#import "TGImagePickerController.h"
 
-@interface AimEditView : UIView
+@interface AimEditView : UIView <TGPhotoAreaDelegate, TGImagePickerControllerDelegate>
 
 -(void) dissapearView;
 
