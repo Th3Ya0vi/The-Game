@@ -90,6 +90,9 @@
 		18A0914D17AEF6C70015C0F2 /* 8@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A0913217AEF6C70015C0F2 /* 8@2x.jpg */; };
 		18A0914E17AEF6C70015C0F2 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A0913317AEF6C70015C0F2 /* 9.jpg */; };
 		18A0914F17AEF6C70015C0F2 /* 9@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A0913417AEF6C70015C0F2 /* 9@2x.jpg */; };
+		18A0915317AF019F0015C0F2 /* TGArhiveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915217AF019F0015C0F2 /* TGArhiveObject.m */; };
+		18A0915617AF03C60015C0F2 /* AimObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915517AF03C60015C0F2 /* AimObject.m */; };
+		18A0915917AF04E20015C0F2 /* AimObjectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915817AF04E10015C0F2 /* AimObjectsManager.m */; };
 		C20A4058BB664D5D9CFAFAA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C714244865647658236073E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +213,12 @@
 		18A0913217AEF6C70015C0F2 /* 8@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "8@2x.jpg"; sourceTree = "<group>"; };
 		18A0913317AEF6C70015C0F2 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		18A0913417AEF6C70015C0F2 /* 9@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "9@2x.jpg"; sourceTree = "<group>"; };
+		18A0915117AF019F0015C0F2 /* TGArhiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGArhiveObject.h; sourceTree = "<group>"; };
+		18A0915217AF019F0015C0F2 /* TGArhiveObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGArhiveObject.m; sourceTree = "<group>"; };
+		18A0915417AF03C50015C0F2 /* AimObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AimObject.h; sourceTree = "<group>"; };
+		18A0915517AF03C60015C0F2 /* AimObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AimObject.m; sourceTree = "<group>"; };
+		18A0915717AF04E00015C0F2 /* AimObjectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AimObjectsManager.h; sourceTree = "<group>"; };
+		18A0915817AF04E10015C0F2 /* AimObjectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AimObjectsManager.m; sourceTree = "<group>"; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E0D513488642B9807A972B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -338,6 +347,7 @@
 		18A09041179BBE1E0015C0F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18A0915017AF017C0015C0F2 /* FileIO */,
 				18A0905A179BDA170015C0F2 /* Managers */,
 				18A09042179BC60D0015C0F2 /* Entity */,
 				18A09043179BC60D0015C0F2 /* Repositories */,
@@ -523,6 +533,19 @@
 				18A0913417AEF6C70015C0F2 /* 9@2x.jpg */,
 			);
 			path = FilterSamples;
+			sourceTree = "<group>";
+		};
+		18A0915017AF017C0015C0F2 /* FileIO */ = {
+			isa = PBXGroup;
+			children = (
+				18A0915117AF019F0015C0F2 /* TGArhiveObject.h */,
+				18A0915217AF019F0015C0F2 /* TGArhiveObject.m */,
+				18A0915417AF03C50015C0F2 /* AimObject.h */,
+				18A0915517AF03C60015C0F2 /* AimObject.m */,
+				18A0915717AF04E00015C0F2 /* AimObjectsManager.h */,
+				18A0915817AF04E10015C0F2 /* AimObjectsManager.m */,
+			);
+			path = FileIO;
 			sourceTree = "<group>";
 		};
 		7C4071B117A00CE7008EFF19 /* Resorces */ = {
@@ -777,6 +800,9 @@
 				18A0909E17AD24CB0015C0F2 /* UIView+ViewController.m in Sources */,
 				18A090D817AEF0F80015C0F2 /* TGPhotoEditViewController.m in Sources */,
 				18A0911417AEF64A0015C0F2 /* GrayscaleContrastFilter.m in Sources */,
+				18A0915317AF019F0015C0F2 /* TGArhiveObject.m in Sources */,
+				18A0915617AF03C60015C0F2 /* AimObject.m in Sources */,
+				18A0915917AF04E20015C0F2 /* AimObjectsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

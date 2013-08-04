@@ -8,6 +8,7 @@
 
 #import "RootWizardViewController.h"
 #import "AimEditView.h"
+#import "AimObjectsManager.h"
 
 @interface RootWizardViewController ()
 
@@ -33,6 +34,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if([[AimObjectsManager sharedInstance] setFileHandler:@"testtesttest.plist"])
+        NSLog(@"AimObjectManager > 0");
+    else
+        NSLog(@"AimObjectManager = 0");
     
     self.navigationController.navigationBarHidden = NO;
     
@@ -94,8 +100,18 @@
 #pragma mark -- Navigation controller buttons selectors
 -(void) onNextPage
 {
+    if([self saveDataFromAimView: [self getViewByIndex:pageIndex]])
+        NSLog(@"AIM SAVE SUCCESSFUL");
+    else
+        NSLog(@"AIM SAVE ERROR");
+    
     pageIndex++;
     [self scrollToPage: pageIndex animated:YES];
+}
+
+-(BOOL) saveDataFromAimView:(AimEditView*)aimView
+{
+    return [[AimObjectsManager sharedInstance] addAimObject: [aimView aimObjectFromView]];
 }
 
 -(void) onCancel
@@ -124,6 +140,19 @@
 -(int) getXPositionOfPage:(NSInteger)page
 {
     return page * self.view.frame.size.width;
+}
+
+-(AimEditView*) getViewByIndex:(NSInteger)index
+{
+    NSInteger loop = 0;
+    for(AimEditView *subview in self.scrollContainerForAims.subviews)
+    {
+        if([subview isKindOfClass:[AimEditView class]]) {
+            if(loop == index)
+                return subview;
+            loop++;
+        }
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

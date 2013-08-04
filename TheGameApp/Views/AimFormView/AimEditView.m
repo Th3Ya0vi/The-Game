@@ -18,11 +18,12 @@
 @property (nonatomic, retain) UITextField *aimTitleField;
 @property (nonatomic, retain) UITextView *aimTextView;
 @property (nonatomic, retain) TGPhotoArea *photo;
+@property (nonatomic, retain) NSString *photoPath;
 @end
 
 @implementation AimEditView
 @synthesize imagePickerController;
-@synthesize aimTitleField, aimTextView, photo;
+@synthesize aimTitleField, aimTextView, photo, photoPath;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -146,7 +147,19 @@
 {
     NSString *assetURL = [asset.defaultRepresentation.url absoluteString];
     
+    photoPath = assetURL;
+    
     [photo updateImageByPath:assetURL];
+}
+
+-(AimObject*) aimObjectFromView
+{
+    AimObject *aimObject = [[AimObject alloc] init];
+    aimObject.aimTitle = aimTitleField.text;
+    aimObject.aimDescription = aimTextView.text;
+    aimObject.aimPhoto = photoPath;
+    
+    return aimObject;
 }
 
 @end
