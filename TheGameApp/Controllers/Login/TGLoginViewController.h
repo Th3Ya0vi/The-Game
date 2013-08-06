@@ -10,4 +10,9 @@
 
 @interface TGLoginViewController : UIViewController
 
+
+-(IBAction)onFacebookClick:(id)sender;
+-(IBAction)onLivejournalClick:(id)sender;
+-(IBAction)onVkontakteClick:(id)sender;
+
 @end
