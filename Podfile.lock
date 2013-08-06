@@ -1,6 +1,7 @@
 PODS:
   - ABMultiton (1.2.1)
   - EasyMapping (0.4.6)
+  - Facebook-iOS-SDK (3.6.0)
   - GPUImage (0.1.0)
   - HRCoder (1.2.2)
   - JSONKit (1.5pre)
@@ -9,7 +10,18 @@ PODS:
   - MBProgressHUD (0.7)
   - NSData+Base64 (1.0.0)
   - Reachability (3.1.0)
+  - ShareKit/Core (2.3.1):
+    - SSKeychain (= 0.2.1)
+  - ShareKit/Facebook (2.3.1):
+    - Facebook-iOS-SDK (~> 3.5)
+    - ShareKit/Core
+  - ShareKit/Vkontakte (2.3.1):
+    - JSONKit (~> 1.4)
+    - ShareKit/Core
+  - SSKeychain (0.2.1)
   - SSToolkit (1.0.4)
+  - xmlrpc (2.3.3):
+    - NSData+Base64 (~> 1.0.0)
 
 DEPENDENCIES:
   - ABMultiton
@@ -20,11 +32,15 @@ DEPENDENCIES:
   - LRResty
   - MBProgressHUD
   - Reachability
+  - ShareKit/Facebook
+  - ShareKit/Vkontakte
   - SSToolkit
+  - xmlrpc
 
 SPEC CHECKSUMS:
   ABMultiton: b0a22178919b139e0b3921825ace1b36ca8e8b91
   EasyMapping: 9e23ea67fb60bcb1761e5972ef62a08a03758f50
+  Facebook-iOS-SDK: 1c59b1f4838e5f8d3cb71943096673db3eefb15d
   GPUImage: 5b902c1df2afe0ac30a8e3e7379f9c0bb25c7c85
   HRCoder: 686700a4246e96844cc898052da171229ee5f65d
   JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
@@ -32,6 +48,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1fd8591a2216d5dec6de24e09187bb03bcbe9946
   NSData+Base64: 36c4e5b6479259c1a68866ccd2a8dd385c9744f7
   Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  ShareKit: d33d7a36ecc08e5c2fe4ef9c8dfcb0ada1e659a0
+  SSKeychain: ffa1a79eb716d9ed1ca184fb0cf218087ca28486
   SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4
+  xmlrpc: 9ebaa6298ce90ff0c3c30404681f2030bdde54db
 
 COCOAPODS: 0.19.1

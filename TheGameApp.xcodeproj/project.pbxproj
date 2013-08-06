@@ -93,11 +93,20 @@
 		18A0915317AF019F0015C0F2 /* TGArhiveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915217AF019F0015C0F2 /* TGArhiveObject.m */; };
 		18A0915617AF03C60015C0F2 /* AimObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915517AF03C60015C0F2 /* AimObject.m */; };
 		18A0915917AF04E20015C0F2 /* AimObjectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915817AF04E10015C0F2 /* AimObjectsManager.m */; };
-		7C65B63017B153DD0084D6E5 /* menu-down-icon-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C65B62F17B153DD0084D6E5 /* menu-down-icon-gray@2x.png */; };
-		7CD9148217B14D0600610468 /* login-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9147E17B14D0600610468 /* login-facebook@2x.png */; };
-		7CD9148317B14D0600610468 /* login-livejournal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9147F17B14D0600610468 /* login-livejournal@2x.png */; };
-		7CD9148417B14D0600610468 /* login-vkontakte@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9148017B14D0600610468 /* login-vkontakte@2x.png */; };
-		7CD9148517B14D0600610468 /* the-Game-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9148117B14D0600610468 /* the-Game-logo@2x.png */; };
+		18A0916217B17D050015C0F2 /* login-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0915D17B17D050015C0F2 /* login-facebook@2x.png */; };
+		18A0916317B17D050015C0F2 /* login-livejournal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0915E17B17D050015C0F2 /* login-livejournal@2x.png */; };
+		18A0916417B17D050015C0F2 /* login-vkontakte@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0915F17B17D050015C0F2 /* login-vkontakte@2x.png */; };
+		18A0916517B17D050015C0F2 /* menu-down-icon-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0916017B17D050015C0F2 /* menu-down-icon-gray@2x.png */; };
+		18A0916617B17D050015C0F2 /* the-Game-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0916117B17D050015C0F2 /* the-Game-logo@2x.png */; };
+		18A0917B17B183090015C0F2 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0916917B183080015C0F2 /* Facebook.m */; };
+		18A0917C17B183090015C0F2 /* Livejournal.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0916B17B183080015C0F2 /* Livejournal.m */; };
+		18A0917D17B183090015C0F2 /* LJDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0916D17B183080015C0F2 /* LJDialog.m */; };
+		18A0918017B183090015C0F2 /* MySHKConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0917217B183080015C0F2 /* MySHKConfigurator.m */; };
+		18A0918117B183090015C0F2 /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0917417B183080015C0F2 /* ShareItem.m */; };
+		18A0918217B183090015C0F2 /* SocManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0917617B183090015C0F2 /* SocManager.m */; };
+		18A0918317B183090015C0F2 /* VKDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0917817B183090015C0F2 /* VKDialog.m */; };
+		18A0918417B183090015C0F2 /* Vkontakte.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0917A17B183090015C0F2 /* Vkontakte.m */; };
+		18A0918617B18CBF0015C0F2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A0918517B18CBF0015C0F2 /* Social.framework */; };
 		C20A4058BB664D5D9CFAFAA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C714244865647658236073E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -112,7 +121,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18A09002179BBCDD0015C0F2 /* TheGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A09002179BBCDD0015C0F2 /* The Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A09005179BBCDD0015C0F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18A09007179BBCDD0015C0F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		18A09009179BBCDD0015C0F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -224,12 +233,29 @@
 		18A0915517AF03C60015C0F2 /* AimObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AimObject.m; sourceTree = "<group>"; };
 		18A0915717AF04E00015C0F2 /* AimObjectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AimObjectsManager.h; sourceTree = "<group>"; };
 		18A0915817AF04E10015C0F2 /* AimObjectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AimObjectsManager.m; sourceTree = "<group>"; };
+		18A0915D17B17D050015C0F2 /* login-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-facebook@2x.png"; path = "TheGameApp/Resorces/login-facebook@2x.png"; sourceTree = SOURCE_ROOT; };
+		18A0915E17B17D050015C0F2 /* login-livejournal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-livejournal@2x.png"; path = "TheGameApp/Resorces/login-livejournal@2x.png"; sourceTree = SOURCE_ROOT; };
+		18A0915F17B17D050015C0F2 /* login-vkontakte@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-vkontakte@2x.png"; path = "TheGameApp/Resorces/login-vkontakte@2x.png"; sourceTree = SOURCE_ROOT; };
+		18A0916017B17D050015C0F2 /* menu-down-icon-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-down-icon-gray@2x.png"; path = "TheGameApp/Resorces/menu-down-icon-gray@2x.png"; sourceTree = SOURCE_ROOT; };
+		18A0916117B17D050015C0F2 /* the-Game-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "the-Game-logo@2x.png"; path = "TheGameApp/Resorces/the-Game-logo@2x.png"; sourceTree = SOURCE_ROOT; };
+		18A0916817B183080015C0F2 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
+		18A0916917B183080015C0F2 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
+		18A0916A17B183080015C0F2 /* Livejournal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Livejournal.h; sourceTree = "<group>"; };
+		18A0916B17B183080015C0F2 /* Livejournal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Livejournal.m; sourceTree = "<group>"; };
+		18A0916C17B183080015C0F2 /* LJDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJDialog.h; sourceTree = "<group>"; };
+		18A0916D17B183080015C0F2 /* LJDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJDialog.m; sourceTree = "<group>"; };
+		18A0917117B183080015C0F2 /* MySHKConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySHKConfigurator.h; sourceTree = "<group>"; };
+		18A0917217B183080015C0F2 /* MySHKConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySHKConfigurator.m; sourceTree = "<group>"; };
+		18A0917317B183080015C0F2 /* ShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareItem.h; sourceTree = "<group>"; };
+		18A0917417B183080015C0F2 /* ShareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareItem.m; sourceTree = "<group>"; };
+		18A0917517B183080015C0F2 /* SocManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocManager.h; sourceTree = "<group>"; };
+		18A0917617B183090015C0F2 /* SocManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocManager.m; sourceTree = "<group>"; };
+		18A0917717B183090015C0F2 /* VKDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKDialog.h; sourceTree = "<group>"; };
+		18A0917817B183090015C0F2 /* VKDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKDialog.m; sourceTree = "<group>"; };
+		18A0917917B183090015C0F2 /* Vkontakte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vkontakte.h; sourceTree = "<group>"; };
+		18A0917A17B183090015C0F2 /* Vkontakte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vkontakte.m; sourceTree = "<group>"; };
+		18A0918517B18CBF0015C0F2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C65B62F17B153DD0084D6E5 /* menu-down-icon-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-down-icon-gray@2x.png"; sourceTree = "<group>"; };
-		7CD9147E17B14D0600610468 /* login-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-facebook@2x.png"; sourceTree = "<group>"; };
-		7CD9147F17B14D0600610468 /* login-livejournal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-livejournal@2x.png"; sourceTree = "<group>"; };
-		7CD9148017B14D0600610468 /* login-vkontakte@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-vkontakte@2x.png"; sourceTree = "<group>"; };
-		7CD9148117B14D0600610468 /* the-Game-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-Game-logo@2x.png"; sourceTree = "<group>"; };
 		C3E0D513488642B9807A972B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -238,6 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A0918617B18CBF0015C0F2 /* Social.framework in Frameworks */,
 				18A0911617AEF6770015C0F2 /* AssetsLibrary.framework in Frameworks */,
 				18A090A017AD2B3B0015C0F2 /* MobileCoreServices.framework in Frameworks */,
 				18A09006179BBCDD0015C0F2 /* UIKit.framework in Frameworks */,
@@ -265,6 +292,7 @@
 		18A08FF9179BBCDD0015C0F2 = {
 			isa = PBXGroup;
 			children = (
+				18A0918517B18CBF0015C0F2 /* Social.framework */,
 				18A0911517AEF6750015C0F2 /* AssetsLibrary.framework */,
 				18A0909F17AD2B3A0015C0F2 /* MobileCoreServices.framework */,
 				18A0900D179BBCDD0015C0F2 /* TheGameApp */,
@@ -278,7 +306,7 @@
 		18A09003179BBCDD0015C0F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18A09002179BBCDD0015C0F2 /* TheGameApp.app */,
+				18A09002179BBCDD0015C0F2 /* The Game.app */,
 				18A09027179BBCDD0015C0F2 /* TheGameAppTests.octest */,
 			);
 			name = Products;
@@ -300,6 +328,7 @@
 		18A0900D179BBCDD0015C0F2 /* TheGameApp */ = {
 			isa = PBXGroup;
 			children = (
+				18A0916717B183080015C0F2 /* SocialNetwork */,
 				18A0909417AD22E00015C0F2 /* InternalControllers */,
 				7CE0CFBE17A29EEA005553E4 /* Views */,
 				7C4071B117A00CE7008EFF19 /* Resorces */,
@@ -558,14 +587,37 @@
 			path = FileIO;
 			sourceTree = "<group>";
 		};
+		18A0916717B183080015C0F2 /* SocialNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				18A0916817B183080015C0F2 /* Facebook.h */,
+				18A0916917B183080015C0F2 /* Facebook.m */,
+				18A0916A17B183080015C0F2 /* Livejournal.h */,
+				18A0916B17B183080015C0F2 /* Livejournal.m */,
+				18A0916C17B183080015C0F2 /* LJDialog.h */,
+				18A0916D17B183080015C0F2 /* LJDialog.m */,
+				18A0917117B183080015C0F2 /* MySHKConfigurator.h */,
+				18A0917217B183080015C0F2 /* MySHKConfigurator.m */,
+				18A0917317B183080015C0F2 /* ShareItem.h */,
+				18A0917417B183080015C0F2 /* ShareItem.m */,
+				18A0917517B183080015C0F2 /* SocManager.h */,
+				18A0917617B183090015C0F2 /* SocManager.m */,
+				18A0917717B183090015C0F2 /* VKDialog.h */,
+				18A0917817B183090015C0F2 /* VKDialog.m */,
+				18A0917917B183090015C0F2 /* Vkontakte.h */,
+				18A0917A17B183090015C0F2 /* Vkontakte.m */,
+			);
+			path = SocialNetwork;
+			sourceTree = "<group>";
+		};
 		7C4071B117A00CE7008EFF19 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
-				7C65B62F17B153DD0084D6E5 /* menu-down-icon-gray@2x.png */,
-				7CD9147E17B14D0600610468 /* login-facebook@2x.png */,
-				7CD9147F17B14D0600610468 /* login-livejournal@2x.png */,
-				7CD9148017B14D0600610468 /* login-vkontakte@2x.png */,
-				7CD9148117B14D0600610468 /* the-Game-logo@2x.png */,
+				18A0915D17B17D050015C0F2 /* login-facebook@2x.png */,
+				18A0915E17B17D050015C0F2 /* login-livejournal@2x.png */,
+				18A0915F17B17D050015C0F2 /* login-vkontakte@2x.png */,
+				18A0916017B17D050015C0F2 /* menu-down-icon-gray@2x.png */,
+				18A0916117B17D050015C0F2 /* the-Game-logo@2x.png */,
 				18A0911717AEF6C40015C0F2 /* Filters */,
 				18A090A117AD45970015C0F2 /* icons */,
 				18A0908A17AD0E720015C0F2 /* photo-icon-small@2x.png */,
@@ -628,7 +680,7 @@
 			);
 			name = TheGameApp;
 			productName = TheGameApp;
-			productReference = 18A09002179BBCDD0015C0F2 /* TheGameApp.app */;
+			productReference = 18A09002179BBCDD0015C0F2 /* The Game.app */;
 			productType = "com.apple.product-type.application";
 		};
 		18A09026179BBCDD0015C0F2 /* TheGameAppTests */ = {
@@ -731,11 +783,11 @@
 				18A0914D17AEF6C70015C0F2 /* 8@2x.jpg in Resources */,
 				18A0914E17AEF6C70015C0F2 /* 9.jpg in Resources */,
 				18A0914F17AEF6C70015C0F2 /* 9@2x.jpg in Resources */,
-				7CD9148217B14D0600610468 /* login-facebook@2x.png in Resources */,
-				7CD9148317B14D0600610468 /* login-livejournal@2x.png in Resources */,
-				7CD9148417B14D0600610468 /* login-vkontakte@2x.png in Resources */,
-				7CD9148517B14D0600610468 /* the-Game-logo@2x.png in Resources */,
-				7C65B63017B153DD0084D6E5 /* menu-down-icon-gray@2x.png in Resources */,
+				18A0916217B17D050015C0F2 /* login-facebook@2x.png in Resources */,
+				18A0916317B17D050015C0F2 /* login-livejournal@2x.png in Resources */,
+				18A0916417B17D050015C0F2 /* login-vkontakte@2x.png in Resources */,
+				18A0916517B17D050015C0F2 /* menu-down-icon-gray@2x.png in Resources */,
+				18A0916617B17D050015C0F2 /* the-Game-logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +875,14 @@
 				18A0915317AF019F0015C0F2 /* TGArhiveObject.m in Sources */,
 				18A0915617AF03C60015C0F2 /* AimObject.m in Sources */,
 				18A0915917AF04E20015C0F2 /* AimObjectsManager.m in Sources */,
+				18A0917B17B183090015C0F2 /* Facebook.m in Sources */,
+				18A0917C17B183090015C0F2 /* Livejournal.m in Sources */,
+				18A0917D17B183090015C0F2 /* LJDialog.m in Sources */,
+				18A0918017B183090015C0F2 /* MySHKConfigurator.m in Sources */,
+				18A0918117B183090015C0F2 /* ShareItem.m in Sources */,
+				18A0918217B183090015C0F2 /* SocManager.m in Sources */,
+				18A0918317B183090015C0F2 /* VKDialog.m in Sources */,
+				18A0918417B183090015C0F2 /* Vkontakte.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,7 +988,35 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheGameApp/TheGameApp-Prefix.pch";
 				INFOPLIST_FILE = "TheGameApp/TheGameApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					AVFoundation,
+					"-framework",
+					CoreData,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreLocation,
+					"-framework",
+					CoreMedia,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					MessageUI,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					OpenGLES,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = "The Game";
 				PROVISIONING_PROFILE = "57ABE4DB-F5F0-4441-9E09-242C6820771B";
 				WRAPPER_EXTENSION = app;
 			};
@@ -942,7 +1030,35 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheGameApp/TheGameApp-Prefix.pch";
 				INFOPLIST_FILE = "TheGameApp/TheGameApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					AVFoundation,
+					"-framework",
+					CoreData,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					CoreLocation,
+					"-framework",
+					CoreMedia,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					MessageUI,
+					"-framework",
+					MobileCoreServices,
+					"-framework",
+					OpenGLES,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Security,
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = "The Game";
 				PROVISIONING_PROFILE = "57ABE4DB-F5F0-4441-9E09-242C6820771B";
 				WRAPPER_EXTENSION = app;
 			};

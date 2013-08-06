@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_EasyMapping 4
 #define COCOAPODS_VERSION_PATCH_EasyMapping 6
 
+// Facebook-iOS-SDK
+#define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK
+#define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK 3
+#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 6
+#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 0
+
 // GPUImage
 #define COCOAPODS_POD_AVAILABLE_GPUImage
 #define COCOAPODS_VERSION_MAJOR_GPUImage 0
@@ -61,9 +67,39 @@
 #define COCOAPODS_VERSION_MINOR_Reachability 1
 #define COCOAPODS_VERSION_PATCH_Reachability 0
 
+// SSKeychain
+#define COCOAPODS_POD_AVAILABLE_SSKeychain
+#define COCOAPODS_VERSION_MAJOR_SSKeychain 0
+#define COCOAPODS_VERSION_MINOR_SSKeychain 2
+#define COCOAPODS_VERSION_PATCH_SSKeychain 1
+
 // SSToolkit
 #define COCOAPODS_POD_AVAILABLE_SSToolkit
 #define COCOAPODS_VERSION_MAJOR_SSToolkit 1
 #define COCOAPODS_VERSION_MINOR_SSToolkit 0
 #define COCOAPODS_VERSION_PATCH_SSToolkit 4
+
+// ShareKit/Core
+#define COCOAPODS_POD_AVAILABLE_ShareKit_Core
+#define COCOAPODS_VERSION_MAJOR_ShareKit_Core 2
+#define COCOAPODS_VERSION_MINOR_ShareKit_Core 3
+#define COCOAPODS_VERSION_PATCH_ShareKit_Core 1
+
+// ShareKit/Facebook
+#define COCOAPODS_POD_AVAILABLE_ShareKit_Facebook
+#define COCOAPODS_VERSION_MAJOR_ShareKit_Facebook 2
+#define COCOAPODS_VERSION_MINOR_ShareKit_Facebook 3
+#define COCOAPODS_VERSION_PATCH_ShareKit_Facebook 1
+
+// ShareKit/Vkontakte
+#define COCOAPODS_POD_AVAILABLE_ShareKit_Vkontakte
+#define COCOAPODS_VERSION_MAJOR_ShareKit_Vkontakte 2
+#define COCOAPODS_VERSION_MINOR_ShareKit_Vkontakte 3
+#define COCOAPODS_VERSION_PATCH_ShareKit_Vkontakte 1
+
+// xmlrpc
+#define COCOAPODS_POD_AVAILABLE_xmlrpc
+#define COCOAPODS_VERSION_MAJOR_xmlrpc 2
+#define COCOAPODS_VERSION_MINOR_xmlrpc 3
+#define COCOAPODS_VERSION_PATCH_xmlrpc 3
 

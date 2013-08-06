@@ -14,6 +14,10 @@
 #import "TGLoginViewController.h"
 #import "PreWizardAimController.h"
 
+#import "MySHKConfigurator.h"
+#import "SHKConfiguration.h"
+#import <FacebookSDK/FacebookSDK.h>
+
 @interface AppDelegate ()
 
 @property (nonatomic, strong) TGWelcomeViewController *welcomeViewController;
@@ -41,11 +45,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    DefaultSHKConfigurator *configurator = [[MySHKConfigurator alloc] init];
+    [SHKConfiguration sharedInstanceWithConfigurator:configurator];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [self monitorReachability];
     
-    [[PlayerManager sharedInstance] uploadBinaryFile];
+    //[[PlayerManager sharedInstance] uploadBinaryFile];
     
     self.welcomeViewController = [[TGWelcomeViewController alloc] init];
     
@@ -128,7 +135,19 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Saves changes in the application's managed object context before the application terminates.
+    [FBSession.activeSession close];
+    
     [self saveContext];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    // attempt to extract a token from the url
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication
+                    fallbackHandler:^(FBAppCall *call) {
+                        NSLog(@"In fallback handler");
+                    }];
 }
 
 - (void)saveContext

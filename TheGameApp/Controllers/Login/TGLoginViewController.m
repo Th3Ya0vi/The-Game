@@ -8,6 +8,7 @@
 
 #import "TGLoginViewController.h"
 #import "AppDelegate.h"
+#import "SocManager.h"
 
 @interface TGLoginViewController ()
 
@@ -36,19 +37,32 @@
 
 -(IBAction)onFacebookClick:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:^{
-        [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentAimWizardViewControllerAnimated:YES];
+    [[SocManager sharedManager]auth:FacebookSocType complete:^(BOOL success){
+        if (success){
+            //UserViewController* vc = [UserViewController new];
+            //[self.navigationController pushViewController:vc animated:YES];
+        }
     }];
 }
 
 -(IBAction)onLivejournalClick:(id)sender
 {
-    [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentAimWizardViewControllerAnimated:YES];
+    [[SocManager sharedManager]auth:LivejournalSocType complete:^(BOOL success){
+        if (success){
+            //UserViewController* vc = [UserViewController new];
+            //[self.navigationController pushViewController:vc animated:YES];
+        }
+    }];
 }
 
 -(IBAction)onVkontakteClick:(id)sender
 {
-    [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentAimWizardViewControllerAnimated:YES];
+    [[SocManager sharedManager]auth:VkontakteSocType complete:^(BOOL success){
+        if (success){
+            //UserViewController* vc = [UserViewController new];
+            //[self.navigationController pushViewController:vc animated:YES];
+        }
+    }];
 }
 
 @end
