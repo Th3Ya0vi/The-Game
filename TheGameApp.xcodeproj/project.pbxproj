@@ -93,6 +93,11 @@
 		18A0915317AF019F0015C0F2 /* TGArhiveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915217AF019F0015C0F2 /* TGArhiveObject.m */; };
 		18A0915617AF03C60015C0F2 /* AimObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915517AF03C60015C0F2 /* AimObject.m */; };
 		18A0915917AF04E20015C0F2 /* AimObjectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0915817AF04E10015C0F2 /* AimObjectsManager.m */; };
+		7C65B63017B153DD0084D6E5 /* menu-down-icon-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C65B62F17B153DD0084D6E5 /* menu-down-icon-gray@2x.png */; };
+		7CD9148217B14D0600610468 /* login-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9147E17B14D0600610468 /* login-facebook@2x.png */; };
+		7CD9148317B14D0600610468 /* login-livejournal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9147F17B14D0600610468 /* login-livejournal@2x.png */; };
+		7CD9148417B14D0600610468 /* login-vkontakte@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9148017B14D0600610468 /* login-vkontakte@2x.png */; };
+		7CD9148517B14D0600610468 /* the-Game-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9148117B14D0600610468 /* the-Game-logo@2x.png */; };
 		C20A4058BB664D5D9CFAFAA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C714244865647658236073E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -220,6 +225,11 @@
 		18A0915717AF04E00015C0F2 /* AimObjectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AimObjectsManager.h; sourceTree = "<group>"; };
 		18A0915817AF04E10015C0F2 /* AimObjectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AimObjectsManager.m; sourceTree = "<group>"; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C65B62F17B153DD0084D6E5 /* menu-down-icon-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-down-icon-gray@2x.png"; sourceTree = "<group>"; };
+		7CD9147E17B14D0600610468 /* login-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-facebook@2x.png"; sourceTree = "<group>"; };
+		7CD9147F17B14D0600610468 /* login-livejournal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-livejournal@2x.png"; sourceTree = "<group>"; };
+		7CD9148017B14D0600610468 /* login-vkontakte@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-vkontakte@2x.png"; sourceTree = "<group>"; };
+		7CD9148117B14D0600610468 /* the-Game-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-Game-logo@2x.png"; sourceTree = "<group>"; };
 		C3E0D513488642B9807A972B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -551,6 +561,11 @@
 		7C4071B117A00CE7008EFF19 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				7C65B62F17B153DD0084D6E5 /* menu-down-icon-gray@2x.png */,
+				7CD9147E17B14D0600610468 /* login-facebook@2x.png */,
+				7CD9147F17B14D0600610468 /* login-livejournal@2x.png */,
+				7CD9148017B14D0600610468 /* login-vkontakte@2x.png */,
+				7CD9148117B14D0600610468 /* the-Game-logo@2x.png */,
 				18A0911717AEF6C40015C0F2 /* Filters */,
 				18A090A117AD45970015C0F2 /* icons */,
 				18A0908A17AD0E720015C0F2 /* photo-icon-small@2x.png */,
@@ -716,6 +731,11 @@
 				18A0914D17AEF6C70015C0F2 /* 8@2x.jpg in Resources */,
 				18A0914E17AEF6C70015C0F2 /* 9.jpg in Resources */,
 				18A0914F17AEF6C70015C0F2 /* 9@2x.jpg in Resources */,
+				7CD9148217B14D0600610468 /* login-facebook@2x.png in Resources */,
+				7CD9148317B14D0600610468 /* login-livejournal@2x.png in Resources */,
+				7CD9148417B14D0600610468 /* login-vkontakte@2x.png in Resources */,
+				7CD9148517B14D0600610468 /* the-Game-logo@2x.png in Resources */,
+				7C65B63017B153DD0084D6E5 /* menu-down-icon-gray@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
