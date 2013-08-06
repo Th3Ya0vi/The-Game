@@ -46,16 +46,25 @@
     [library assetForURL:[NSURL URLWithString:url] resultBlock:^(ALAsset *asset) {
         
         CGImageRef thumbnailImageRef = [asset thumbnail];
-        UIImage *thumbnail = [UIImage imageWithCGImage:thumbnailImageRef];
         
-        /*ALAssetRepresentation *representation = [asset defaultRepresentation];
-         CGImageRef originalImage = [representation fullResolutionImage];
-         UIImage *original = [UIImage imageWithCGImage:originalImage];*/
-        
-        contentImage.image = thumbnail;
-        contentImage.frame = CGRectMake(0, 0,
-                                        45,
-                                        45);
+        if(thumbnailImageRef != nil)    {
+            /*ALAssetRepresentation *representation = [asset defaultRepresentation];
+             CGImageRef originalImage = [representation fullResolutionImage];
+             UIImage *original = [UIImage imageWithCGImage:originalImage];*/
+            
+            UIImage *thumbnail = [UIImage imageWithCGImage:thumbnailImageRef];
+
+            contentImage.image = thumbnail;
+            contentImage.frame = CGRectMake(0, 0,
+                                            45,
+                                            45);
+        } else  {
+            contentImage.image = [UIImage imageNamed:@"photo-icon-small@2x.png"];
+            contentImage.frame = CGRectMake((self.frame.size.width-contentImage.image.size.width/2)/2,
+                                            (self.frame.size.height-contentImage.image.size.height/2)/2,
+                                            contentImage.image.size.width/2,
+                                            contentImage.image.size.height/2);
+        }
         
     } failureBlock:^(NSError *error) {
         NSLog(@"asset failture");

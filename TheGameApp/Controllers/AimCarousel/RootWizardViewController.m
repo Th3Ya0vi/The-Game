@@ -7,7 +7,6 @@
 //
 
 #import "RootWizardViewController.h"
-#import "AimEditView.h"
 #import "AimObjectsManager.h"
 
 @interface RootWizardViewController ()
@@ -36,9 +35,9 @@
     [super viewDidLoad];
     
     if([[AimObjectsManager sharedInstance] setFileHandler:@"testtesttest.plist"])
-        NSLog(@"AimObjectManager > 0");
+        NSLog(@"Cache for aims wizard > 0");
     else
-        NSLog(@"AimObjectManager = 0");
+        NSLog(@"Cache for aims wizard = 0");
     
     self.navigationController.navigationBarHidden = NO;
     
@@ -91,31 +90,47 @@
 -(void) addAimPage:(NSInteger)index
 {
     AimEditView *aimPage = [[AimEditView alloc] initWithFrame:self.view.bounds];
+    aimPage.delegate = (id)self;
     aimPage.frame = CGRectMake(index*aimPage.frame.size.width, aimPage.frame.origin.y, aimPage.frame.size.width, aimPage.frame.size.height);
+    
+    [aimPage setAimObject: [[AimObjectsManager sharedInstance] aimObjectByIndex:index]];
     
     scrollContainerForAims.contentSize = CGSizeMake( (index+1)*self.view.frame.size.width, self.view.bounds.size.height);
     [scrollContainerForAims addSubview:aimPage];
 }
 
+-(void) didChangeContextInView
+{
+    NSLog(@"1");
+    [self performSelectorOnMainThread:@selector(saveAllDataToCache) withObject:nil waitUntilDone:NO];
+}
+
 #pragma mark -- Navigation controller buttons selectors
 -(void) onNextPage
 {
-    if([self saveDataFromAimView: [self getViewByIndex:pageIndex]])
-        NSLog(@"AIM SAVE SUCCESSFUL");
-    else
-        NSLog(@"AIM SAVE ERROR");
-    
     pageIndex++;
     [self scrollToPage: pageIndex animated:YES];
 }
 
--(BOOL) saveDataFromAimView:(AimEditView*)aimView
+-(void) saveAllDataToCache
 {
-    return [[AimObjectsManager sharedInstance] addAimObject: [aimView aimObjectFromView]];
+    NSInteger loop = 0;
+    for(AimEditView *subview in self.scrollContainerForAims.subviews)
+    {
+        if([subview isKindOfClass:[AimEditView class]]) {
+            [self saveDataFromAimView: subview byIndex:loop++];
+        }
+    }
+}
+
+-(BOOL) saveDataFromAimView:(AimEditView*)aimView byIndex:(NSInteger)index
+{
+    return [[AimObjectsManager sharedInstance] addAimObject:[aimView aimObjectFromView] toIndex:index];
 }
 
 -(void) onCancel
 {
+    [self performSelectorOnMainThread:@selector(saveAllDataToCache) withObject:nil waitUntilDone:YES];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -153,6 +168,7 @@
             loop++;
         }
     }
+    return nil;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -191,6 +207,16 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [scrollView endEditing:YES];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    [self performSelectorOnMainThread:@selector(saveAllDataToCache) withObject:nil waitUntilDone:NO];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self performSelectorOnMainThread:@selector(saveAllDataToCache) withObject:nil waitUntilDone:NO];
 }
 
 @end

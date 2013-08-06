@@ -22,6 +22,7 @@
 @end
 
 @implementation AimEditView
+@synthesize delegate;
 @synthesize imagePickerController;
 @synthesize aimTitleField, aimTextView, photo, photoPath;
 
@@ -146,10 +147,10 @@
 -(void) addDataFromPhotoEdit:(ALAsset*)asset
 {
     NSString *assetURL = [asset.defaultRepresentation.url absoluteString];
-    
     photoPath = assetURL;
-    
     [photo updateImageByPath:assetURL];
+    
+    [self sendAboutChangeInView];
 }
 
 -(AimObject*) aimObjectFromView
@@ -160,6 +161,22 @@
     aimObject.aimPhoto = photoPath;
     
     return aimObject;
+}
+
+-(void) setAimObject:(AimObject*)aimObject
+{
+    aimTitleField.text = aimObject.aimTitle;
+    aimTextView.text = aimObject.aimDescription;
+    photoPath = aimObject.aimPhoto;
+    [photo updateImageByPath:aimObject.aimPhoto];
+}
+
+-(void) sendAboutChangeInView
+{
+    if([delegate respondsToSelector:@selector(didChangeContextInView)])
+    {
+        [delegate didChangeContextInView];
+    }
 }
 
 @end

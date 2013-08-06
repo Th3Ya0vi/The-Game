@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AimObject : NSObject
+@interface AimObject : NSObject <NSCoding>
 
 @property (nonatomic, retain) NSString *aimTitle;
 @property (nonatomic, retain) NSString *aimDescription;

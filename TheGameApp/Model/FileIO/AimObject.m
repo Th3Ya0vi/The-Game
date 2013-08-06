@@ -9,5 +9,27 @@
 #import "AimObject.h"
 
 @implementation AimObject
+@synthesize aimDescription, aimTitle, aimPhoto;
+
+#pragma mark -
+#pragma mark NSCoding
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super init]))
+    {
+        self.aimDescription = [aDecoder decodeObjectForKey:@"aimDescription"];
+        self.aimTitle = [aDecoder decodeObjectForKey:@"aimTitle"];
+        self.aimPhoto = [aDecoder decodeObjectForKey:@"aimPhoto"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.aimDescription forKey:@"aimDescription"];
+    [aCoder encodeObject:self.aimTitle forKey:@"aimTitle"];
+    [aCoder encodeObject:self.aimPhoto forKey:@"aimPhoto"];
+}
 
 @end

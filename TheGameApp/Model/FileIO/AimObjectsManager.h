@@ -13,9 +13,8 @@
 
 @interface AimObjectsManager : TGArhiveObject <ABMultitonProtocol>
 
-@property (readonly, retain) NSMutableArray *aimObjectsArray;
-
 -(BOOL) setFileHandler:(NSString*)accessHandler;
--(BOOL) addAimObject:(AimObject*)aimObject;
+-(BOOL) addAimObject:(AimObject*)aimObject toIndex:(NSInteger)index;
+-(AimObject*) aimObjectByIndex:(NSInteger)index;
 
 @end

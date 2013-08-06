@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AimEditView.h"
 
-@interface RootWizardViewController : UIViewController
+@interface RootWizardViewController : UIViewController <AimEditViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollContainerForAims;
 

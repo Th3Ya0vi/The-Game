@@ -11,10 +11,17 @@
 #import "TGImagePickerController.h"
 #import "AimObject.h"
 
+@protocol AimEditViewDelegate <NSObject>
+-(void) didChangeContextInView;
+@end
+
 @interface AimEditView : UIView <TGPhotoAreaDelegate, TGImagePickerControllerDelegate>
+
+@property (nonatomic, retain) id<AimEditViewDelegate> delegate;
 
 -(void) dissapearView;
 
 -(AimObject*) aimObjectFromView;
+-(void) setAimObject:(AimObject*)aimObject;
 
 @end

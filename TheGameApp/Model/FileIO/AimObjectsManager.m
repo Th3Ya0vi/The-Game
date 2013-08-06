@@ -7,9 +7,11 @@
 //
 
 #import "AimObjectsManager.h"
+#import "AimObject.h"
 
 @interface AimObjectsManager()
 @property (nonatomic, retain) NSString *_accessHandler;
+@property (nonatomic, retain) NSMutableArray *aimObjectsArray;
 @end
 
 @implementation AimObjectsManager
@@ -23,8 +25,6 @@
 
 -(id) init
 {
-    aimObjectsArray = [[NSMutableArray alloc] init];
-    
     return [super init];
 }
 
@@ -38,16 +38,32 @@
 -(BOOL) updateDataFromFileHandler
 {
     aimObjectsArray = [[self class] unarhiveObjectFromFile:_accessHandler];
-    if(aimObjectsArray.count == 0) return NO;
+    if(aimObjectsArray.count == 0) {
+        aimObjectsArray = [[NSMutableArray alloc] init];
+        return NO;
+    }
     
     return YES;
 }
 
--(BOOL) addAimObject:(AimObject*)aimObject
+-(BOOL) addAimObject:(AimObject*)aimObject toIndex:(NSInteger)index
 {
-    [aimObjectsArray addObject:aimObject];
+    if(index >= aimObjectsArray.count)
+        [aimObjectsArray addObject:aimObject];
+    else
+        [aimObjectsArray replaceObjectAtIndex:index withObject:aimObject];
     
     return [[self class] saveArhiveFromObject:aimObjectsArray toFile:_accessHandler];
+}
+
+-(AimObject*) aimObjectByIndex:(NSInteger)index
+{
+    if(index >= aimObjectsArray.count)  {
+        return [AimObject new];
+    }
+    else    {
+        return [aimObjectsArray objectAtIndex:index];
+    }
 }
 
 @end

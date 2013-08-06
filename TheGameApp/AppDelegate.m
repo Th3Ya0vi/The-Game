@@ -77,7 +77,7 @@
     NSLog(@"Reachability changed: %@", curReach);
     networkStatus = [curReach currentReachabilityStatus];
     
-    NSLog(@"=>%i", networkStatus);
+    NSLog(@"Network status:%i", networkStatus);
     
     /*MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
     
