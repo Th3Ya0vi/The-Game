@@ -9,6 +9,60 @@
 #import "RootWizardViewController.h"
 #import "AimObjectsManager.h"
 
+@implementation UINavigationBar (customNav)
+- (CGSize)sizeThatFits:(CGSize)size
+{
+    CGSize newSize = CGSizeMake(self.frame.size.width,50);
+    return newSize;
+}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    for (UIView *view in self.subviews) {
+        if([view isKindOfClass:[UIButton class]])   {
+            float centerY = self.bounds.size.height / 2.0f;
+            CGPoint center = view.center;
+            center.y = centerY;
+            view.center = center;
+        }
+        else if([view isKindOfClass:[UILabel class]])
+        {
+            float centerY = self.bounds.size.height / 2.0f;
+            float centerX = self.bounds.size.width / 2.0f;
+            CGPoint center = view.center;
+            center.y = centerY;
+            center.x = centerX;
+            view.center = center;
+        }
+    }
+}
+@end
+
+@interface UIBarButtonItem (BarButtonItemExtended)
++ (UIBarButtonItem*)barItemWithImage:(UIImage*)image target:(id)target action:(SEL)action;
+@end
+
+@implementation UIBarButtonItem (BarButtonItemExtended)
+
++ (UIBarButtonItem*)barItemWithImage:(UIImage*)image target:(id)target action:(SEL)action
+{
+    UIButton *imgButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [imgButton setImage:image forState:UIControlStateNormal];
+    imgButton.frame = CGRectMake(0.0, 0.0, image.size.width/2, image.size.height/2);
+    
+    UIBarButtonItem *b = [[UIBarButtonItem alloc]initWithCustomView:imgButton];
+    
+    [imgButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    [b setAction:action];
+    [b setTarget:target];
+    
+    return b;
+}
+@end
+
 @interface RootWizardViewController ()
 
 @end
@@ -41,15 +95,18 @@
     
     self.navigationController.navigationBarHidden = NO;
     
-    UIBarButtonItem *onNextPageButton = [[UIBarButtonItem alloc] initWithTitle:@">" style:UIBarButtonItemStyleBordered target:self action:@selector(onNextPage)];
+    UIBarButtonItem *onNextPageButton = [UIBarButtonItem barItemWithImage:[UIImage imageNamed:@"toolbar-proceed-icon-white@2x.png"] target:self action:@selector(onNextPage)];
     [self.navigationItem setRightBarButtonItem:onNextPageButton animated:YES];
     
-    UIBarButtonItem *onCancelButton = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStyleBordered target:self action:@selector(onCancel)];
+    UIBarButtonItem *onCancelButton = [UIBarButtonItem barItemWithImage:[UIImage imageNamed:@"toolbar-cancel-icon@2x.png"] target:self action:@selector(onCancel)];
+    [onCancelButton setBackgroundImage:[UIImage new] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [self.navigationItem setLeftBarButtonItem:onCancelButton animated:YES];
     
     titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textColor = [UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1.0];
+    titleLabel.layer.shadowColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:0.4].CGColor;
+    titleLabel.layer.shadowOffset = CGSizeMake(0.0, 0.5);
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:19];
     [self.navigationItem setTitleView: titleLabel];
     

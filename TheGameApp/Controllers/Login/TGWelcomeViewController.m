@@ -39,7 +39,6 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentLoginViewControllerAnimated:NO];
-    //[(AppDelegate*)[[UIApplication sharedApplication] delegate] presentAimWizardViewControllerAnimated:YES];
 }
 
 @end

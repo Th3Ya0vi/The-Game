@@ -27,6 +27,8 @@ typedef void (^SocAuthHandler)(BOOL success);
 
 @property (nonatomic, readonly, copy) NSString* username;
 @property (nonatomic, readonly, copy) NSString* userpic;
+@property (nonatomic, readonly, copy) NSString* country;
+@property (nonatomic, readonly, copy) NSString* city;
 
 +(id)sharedManager;
 

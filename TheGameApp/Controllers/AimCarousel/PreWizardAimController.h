@@ -11,5 +11,6 @@
 @interface PreWizardAimController : UIViewController
 
 -(IBAction) addAims:(id)sender;
+-(IBAction) onExit:(id)sender;
 
 @end

@@ -194,13 +194,17 @@ typedef enum
     
     if (_sendType == SendTypeVKGetUseInfo){
         NSDictionary *userinfo = [[NSUserDefaults standardUserDefaults] objectForKey:@"kSHKVkontakteUserInfo"];
+        NSLog(@"===>%@", userinfo);
         NSString *first_name = userinfo[@"first_name"];
         NSString *last_name = userinfo[@"last_name"];
+        NSString *country = userinfo[@"country"];
+        NSString *city = userinfo[@"city"];
         //NSString *photo = userinfo[@"photo"];
         NSString *photo_medium = userinfo[@"photo_medium"];
-        
         _username = [NSString stringWithFormat:@"%@ %@",first_name, last_name];
         _userpic = photo_medium;
+        _country = country;
+        _city = city;
         
         NSString* token =[[NSUserDefaults standardUserDefaults] objectForKey:kSHKVkontakteAccessTokenKey];
         [self notifyAuth:YES :token];

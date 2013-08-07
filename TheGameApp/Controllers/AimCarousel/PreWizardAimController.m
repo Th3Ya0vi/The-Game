@@ -8,6 +8,7 @@
 
 #import "PreWizardAimController.h"
 #import "RootWizardViewController.h"
+#import "AppDelegate.h"
 
 @interface PreWizardAimController ()
 @property (nonatomic, strong) RootWizardViewController *rootWizardViewController;
@@ -45,6 +46,15 @@
     rootWizardViewController = [[RootWizardViewController alloc] init];
     
     [self.navigationController pushViewController:rootWizardViewController animated:YES];
+}
+
+-(IBAction) onExit:(id)sender
+{
+    [[SocManager sharedManager] logout];
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+       [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentLoginViewControllerAnimated:YES];
+    }];
 }
 
 @end

@@ -108,6 +108,17 @@
 		18A0918417B183090015C0F2 /* Vkontakte.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0917A17B183090015C0F2 /* Vkontakte.m */; };
 		18A0918617B18CBF0015C0F2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A0918517B18CBF0015C0F2 /* Social.framework */; };
 		7CD5395717B2198D00EACBF9 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395617B2198D00EACBF9 /* FacebookSDKResources.bundle */; };
+		7CD5396617B2525900EACBF9 /* toolbar-back-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395B17B2525900EACBF9 /* toolbar-back-icon@2x.png */; };
+		7CD5396717B2525900EACBF9 /* toolbar-cancel-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395C17B2525900EACBF9 /* toolbar-cancel-icon@2x.png */; };
+		7CD5396817B2525900EACBF9 /* toolbar-compose-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395D17B2525900EACBF9 /* toolbar-compose-icon@2x.png */; };
+		7CD5396917B2525900EACBF9 /* toolbar-eye-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395E17B2525900EACBF9 /* toolbar-eye-icon@2x.png */; };
+		7CD5396A17B2525900EACBF9 /* toolbar-icon-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395F17B2525900EACBF9 /* toolbar-icon-back@2x.png */; };
+		7CD5396B17B2525900EACBF9 /* toolbar-icon-eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5396017B2525900EACBF9 /* toolbar-icon-eye@2x.png */; };
+		7CD5396C17B2525900EACBF9 /* toolbar-icon-more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5396117B2525900EACBF9 /* toolbar-icon-more@2x.png */; };
+		7CD5396D17B2525900EACBF9 /* toolbar-more-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5396217B2525900EACBF9 /* toolbar-more-icon@2x.png */; };
+		7CD5396E17B2525900EACBF9 /* toolbar-photo-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5396317B2525900EACBF9 /* toolbar-photo-icon@2x.png */; };
+		7CD5396F17B2525900EACBF9 /* toolbar-proceed-icon-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5396417B2525900EACBF9 /* toolbar-proceed-icon-white@2x.png */; };
+		7CD5397017B2525900EACBF9 /* toolbar-video-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5396517B2525900EACBF9 /* toolbar-video-icon@2x.png */; };
 		C20A4058BB664D5D9CFAFAA5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C714244865647658236073E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -258,6 +269,17 @@
 		18A0918517B18CBF0015C0F2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD5395617B2198D00EACBF9 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		7CD5395B17B2525900EACBF9 /* toolbar-back-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-back-icon@2x.png"; sourceTree = "<group>"; };
+		7CD5395C17B2525900EACBF9 /* toolbar-cancel-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-cancel-icon@2x.png"; sourceTree = "<group>"; };
+		7CD5395D17B2525900EACBF9 /* toolbar-compose-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-compose-icon@2x.png"; sourceTree = "<group>"; };
+		7CD5395E17B2525900EACBF9 /* toolbar-eye-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-eye-icon@2x.png"; sourceTree = "<group>"; };
+		7CD5395F17B2525900EACBF9 /* toolbar-icon-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon-back@2x.png"; sourceTree = "<group>"; };
+		7CD5396017B2525900EACBF9 /* toolbar-icon-eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon-eye@2x.png"; sourceTree = "<group>"; };
+		7CD5396117B2525900EACBF9 /* toolbar-icon-more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon-more@2x.png"; sourceTree = "<group>"; };
+		7CD5396217B2525900EACBF9 /* toolbar-more-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-more-icon@2x.png"; sourceTree = "<group>"; };
+		7CD5396317B2525900EACBF9 /* toolbar-photo-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-photo-icon@2x.png"; sourceTree = "<group>"; };
+		7CD5396417B2525900EACBF9 /* toolbar-proceed-icon-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-proceed-icon-white@2x.png"; sourceTree = "<group>"; };
+		7CD5396517B2525900EACBF9 /* toolbar-video-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-video-icon@2x.png"; sourceTree = "<group>"; };
 		C3E0D513488642B9807A972B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -616,13 +638,24 @@
 		7C4071B117A00CE7008EFF19 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				18A0911717AEF6C40015C0F2 /* Filters */,
+				18A090A117AD45970015C0F2 /* icons */,
+				7CD5395B17B2525900EACBF9 /* toolbar-back-icon@2x.png */,
+				7CD5395C17B2525900EACBF9 /* toolbar-cancel-icon@2x.png */,
+				7CD5395D17B2525900EACBF9 /* toolbar-compose-icon@2x.png */,
+				7CD5395E17B2525900EACBF9 /* toolbar-eye-icon@2x.png */,
+				7CD5395F17B2525900EACBF9 /* toolbar-icon-back@2x.png */,
+				7CD5396017B2525900EACBF9 /* toolbar-icon-eye@2x.png */,
+				7CD5396117B2525900EACBF9 /* toolbar-icon-more@2x.png */,
+				7CD5396217B2525900EACBF9 /* toolbar-more-icon@2x.png */,
+				7CD5396317B2525900EACBF9 /* toolbar-photo-icon@2x.png */,
+				7CD5396417B2525900EACBF9 /* toolbar-proceed-icon-white@2x.png */,
+				7CD5396517B2525900EACBF9 /* toolbar-video-icon@2x.png */,
 				18A0915D17B17D050015C0F2 /* login-facebook@2x.png */,
 				18A0915E17B17D050015C0F2 /* login-livejournal@2x.png */,
 				18A0915F17B17D050015C0F2 /* login-vkontakte@2x.png */,
 				18A0916017B17D050015C0F2 /* menu-down-icon-gray@2x.png */,
 				18A0916117B17D050015C0F2 /* the-Game-logo@2x.png */,
-				18A0911717AEF6C40015C0F2 /* Filters */,
-				18A090A117AD45970015C0F2 /* icons */,
 				18A0908A17AD0E720015C0F2 /* photo-icon-small@2x.png */,
 				18A0908417AD00C60015C0F2 /* cross-icon-big@2x.png */,
 				18A0907A17A060140015C0F2 /* login-background@2x.png */,
@@ -792,6 +825,17 @@
 				18A0916517B17D050015C0F2 /* menu-down-icon-gray@2x.png in Resources */,
 				18A0916617B17D050015C0F2 /* the-Game-logo@2x.png in Resources */,
 				7CD5395717B2198D00EACBF9 /* FacebookSDKResources.bundle in Resources */,
+				7CD5396617B2525900EACBF9 /* toolbar-back-icon@2x.png in Resources */,
+				7CD5396717B2525900EACBF9 /* toolbar-cancel-icon@2x.png in Resources */,
+				7CD5396817B2525900EACBF9 /* toolbar-compose-icon@2x.png in Resources */,
+				7CD5396917B2525900EACBF9 /* toolbar-eye-icon@2x.png in Resources */,
+				7CD5396A17B2525900EACBF9 /* toolbar-icon-back@2x.png in Resources */,
+				7CD5396B17B2525900EACBF9 /* toolbar-icon-eye@2x.png in Resources */,
+				7CD5396C17B2525900EACBF9 /* toolbar-icon-more@2x.png in Resources */,
+				7CD5396D17B2525900EACBF9 /* toolbar-more-icon@2x.png in Resources */,
+				7CD5396E17B2525900EACBF9 /* toolbar-photo-icon@2x.png in Resources */,
+				7CD5396F17B2525900EACBF9 /* toolbar-proceed-icon-white@2x.png in Resources */,
+				7CD5397017B2525900EACBF9 /* toolbar-video-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

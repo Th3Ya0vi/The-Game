@@ -21,5 +21,6 @@
     #import "NSObject+NotifyHelper.h"
 #endif
 
+#import "SocManager.h"
 #import "UpdateManager.h"
 #import "PlayerManager.h"

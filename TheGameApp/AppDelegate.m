@@ -50,6 +50,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    [self setupAppearance];
     [self monitorReachability];
     
     //[[PlayerManager sharedInstance] uploadBinaryFile];
@@ -63,6 +64,23 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)setupAppearance {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:242.0/255.0 green:242.0/255.0 blue:242.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                UITextAttributeTextColor: [UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1.0],
+                          UITextAttributeTextShadowColor: [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:0.4],
+                         UITextAttributeTextShadowOffset: [NSValue valueWithCGSize:CGSizeMake(0.0f, 0.5f)]
+     }];
+    
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"toolbar-back-icon@2x.png"]
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
 }
 
 - (void)monitorReachability {
@@ -101,13 +119,13 @@
 - (void)presentLoginViewControllerAnimated:(BOOL)animated {
     TGLoginViewController *loginViewController = [[TGLoginViewController alloc] init];
     
-    [self.welcomeViewController presentModalViewController:loginViewController animated:NO];
+    [self.welcomeViewController presentModalViewController:loginViewController animated:animated];
 }
 
 - (void)presentAimWizardViewControllerAnimated:(BOOL)animated   {
     wizardViewController = [[PreWizardAimController alloc] init];
     
-    [self.welcomeViewController presentModalViewController:[[UINavigationController alloc] initWithRootViewController:wizardViewController] animated:NO];
+    [self.welcomeViewController presentModalViewController:[[UINavigationController alloc] initWithRootViewController:wizardViewController] animated:animated];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
