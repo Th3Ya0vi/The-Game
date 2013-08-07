@@ -146,19 +146,20 @@
 
 -(void) addAimPage:(NSInteger)index
 {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
     AimEditView *aimPage = [[AimEditView alloc] initWithFrame:self.view.bounds];
     aimPage.delegate = (id)self;
-    aimPage.frame = CGRectMake(index*aimPage.frame.size.width, aimPage.frame.origin.y, aimPage.frame.size.width, aimPage.frame.size.height);
+    aimPage.frame = CGRectMake(index*aimPage.frame.size.width, 0, aimPage.frame.size.width, screenRect.size.height-50-20);
     
     [aimPage setAimObject: [[AimObjectsManager sharedInstance] aimObjectByIndex:index]];
     
-    scrollContainerForAims.contentSize = CGSizeMake( (index+1)*self.view.frame.size.width, self.view.bounds.size.height);
+    scrollContainerForAims.contentSize = CGSizeMake( (index+1)*self.scrollContainerForAims.frame.size.width, screenRect.size.height-50-20);
     [scrollContainerForAims addSubview:aimPage];
 }
 
 -(void) didChangeContextInView
 {
-    NSLog(@"1");
     [self performSelectorOnMainThread:@selector(saveAllDataToCache) withObject:nil waitUntilDone:NO];
 }
 
