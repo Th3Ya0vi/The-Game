@@ -189,7 +189,8 @@
 -(void) onCancel
 {
     [self performSelectorOnMainThread:@selector(saveAllDataToCache) withObject:nil waitUntilDone:YES];
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) scrollToPage:(NSInteger)page animated:(BOOL)animated

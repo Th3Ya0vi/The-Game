@@ -44,8 +44,9 @@
 -(IBAction) addAims:(id)sender
 {
     rootWizardViewController = [[RootWizardViewController alloc] init];
-    
-    [self.navigationController pushViewController:rootWizardViewController animated:YES];
+    UINavigationController *nnn  = [[UINavigationController alloc] initWithRootViewController:rootWizardViewController];
+   
+    [self presentViewController:nnn animated:YES completion:nil];
 }
 
 -(IBAction) onExit:(id)sender
