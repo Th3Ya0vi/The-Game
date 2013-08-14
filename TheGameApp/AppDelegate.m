@@ -78,9 +78,9 @@
     
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"toolbar-back-icon@2x.png"]
+    /*  [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"toolbar-back-icon@2x.png"]
                                                       forState:UIControlStateNormal
-                                                    barMetrics:UIBarMetricsDefault];
+                                                    barMetrics:UIBarMetricsDefault];*/
 }
 
 - (void)monitorReachability {

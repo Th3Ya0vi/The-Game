@@ -208,7 +208,7 @@
 
 -(int) getCurrentDisplayedPage
 {
-    return floor(scrollContainerForAims.contentOffset.x/self.view.frame.size.width);
+    return floor(scrollContainerForAims.contentOffset.x/self.view.frame.size.width-0.5)+1;
 }
 
 -(int) getXPositionOfPage:(NSInteger)page
@@ -233,8 +233,15 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     int currentPage = [self getCurrentDisplayedPage];
+    if(currentPage < 0 || currentPage > 9)
+        return;
     
     pageIndex = currentPage;
+    
+    currentPage = floor(scrollContainerForAims.contentOffset.x/self.view.frame.size.width);
+    if(currentPage < 0 || currentPage >= 9)
+        return;
+    
     [self setAimTitle];
     
     double minimumZoom = 0.93;
