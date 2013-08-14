@@ -121,9 +121,10 @@
 
 -(void) openPreWizardController
 {
-    [self dismissViewControllerAnimated:YES completion:^{
+    /*[self dismissViewControllerAnimated:YES completion:^{
         [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentAimWizardViewControllerAnimated:YES];
-    }];
+    }];*/
+    [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentAimWizardViewControllerAnimated:YES];
 }
 
 @end

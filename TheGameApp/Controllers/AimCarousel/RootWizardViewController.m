@@ -8,6 +8,7 @@
 
 #import "RootWizardViewController.h"
 #import "AimObjectsManager.h"
+#import "AppDelegate.h"
 
 @implementation UINavigationBar (customNav)
 - (CGSize)sizeThatFits:(CGSize)size
@@ -166,8 +167,9 @@
 #pragma mark -- Navigation controller buttons selectors
 -(void) onNextPage
 {
-    pageIndex++;
-    [self scrollToPage: pageIndex animated:YES];
+    //pageIndex++;
+    //[self scrollToPage: pageIndex animated:YES];
+    [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentRootTabBarController];
 }
 
 -(void) saveAllDataToCache

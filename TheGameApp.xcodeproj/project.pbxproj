@@ -107,6 +107,8 @@
 		18A0918317B183090015C0F2 /* VKDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0917817B183090015C0F2 /* VKDialog.m */; };
 		18A0918417B183090015C0F2 /* Vkontakte.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0917A17B183090015C0F2 /* Vkontakte.m */; };
 		18A0918617B18CBF0015C0F2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A0918517B18CBF0015C0F2 /* Social.framework */; };
+		7C9E18D117BBA2C900F15404 /* RootGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E18CF17BBA2C900F15404 /* RootGameViewController.m */; };
+		7C9E18D217BBA2C900F15404 /* RootGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18D017BBA2C900F15404 /* RootGameViewController.xib */; };
 		7CD5395717B2198D00EACBF9 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395617B2198D00EACBF9 /* FacebookSDKResources.bundle */; };
 		7CD5396617B2525900EACBF9 /* toolbar-back-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395B17B2525900EACBF9 /* toolbar-back-icon@2x.png */; };
 		7CD5396717B2525900EACBF9 /* toolbar-cancel-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395C17B2525900EACBF9 /* toolbar-cancel-icon@2x.png */; };
@@ -268,6 +270,9 @@
 		18A0917A17B183090015C0F2 /* Vkontakte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vkontakte.m; sourceTree = "<group>"; };
 		18A0918517B18CBF0015C0F2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6C714244865647658236073E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C9E18CE17BBA2C900F15404 /* RootGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootGameViewController.h; sourceTree = "<group>"; };
+		7C9E18CF17BBA2C900F15404 /* RootGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootGameViewController.m; sourceTree = "<group>"; };
+		7C9E18D017BBA2C900F15404 /* RootGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootGameViewController.xib; sourceTree = "<group>"; };
 		7CD5395617B2198D00EACBF9 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		7CD5395B17B2525900EACBF9 /* toolbar-back-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-back-icon@2x.png"; sourceTree = "<group>"; };
 		7CD5395C17B2525900EACBF9 /* toolbar-cancel-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-cancel-icon@2x.png"; sourceTree = "<group>"; };
@@ -472,6 +477,7 @@
 			children = (
 				18A09062179C3C0C0015C0F2 /* Login */,
 				7C4071B417A01097008EFF19 /* AimCarousel */,
+				7C9E18CD17BBA06F00F15404 /* Game */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -678,6 +684,17 @@
 			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/AimCarousel";
 			sourceTree = "<group>";
 		};
+		7C9E18CD17BBA06F00F15404 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E18CE17BBA2C900F15404 /* RootGameViewController.h */,
+				7C9E18CF17BBA2C900F15404 /* RootGameViewController.m */,
+				7C9E18D017BBA2C900F15404 /* RootGameViewController.xib */,
+			);
+			name = Game;
+			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/Game";
+			sourceTree = "<group>";
+		};
 		7CE0CFBE17A29EEA005553E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,6 +853,7 @@
 				7CD5396E17B2525900EACBF9 /* toolbar-photo-icon@2x.png in Resources */,
 				7CD5396F17B2525900EACBF9 /* toolbar-proceed-icon-white@2x.png in Resources */,
 				7CD5397017B2525900EACBF9 /* toolbar-video-icon@2x.png in Resources */,
+				7C9E18D217BBA2C900F15404 /* RootGameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,6 +949,7 @@
 				18A0918217B183090015C0F2 /* SocManager.m in Sources */,
 				18A0918317B183090015C0F2 /* VKDialog.m in Sources */,
 				18A0918417B183090015C0F2 /* Vkontakte.m in Sources */,
+				7C9E18D117BBA2C900F15404 /* RootGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

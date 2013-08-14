@@ -1,5 +1,6 @@
 PODS:
   - ABMultiton (1.2.1)
+  - AKTabBarController (1.1.0)
   - EasyMapping (0.4.6)
   - Facebook-iOS-SDK (3.6.0)
   - GPUImage (0.1.0)
@@ -25,6 +26,7 @@ PODS:
 
 DEPENDENCIES:
   - ABMultiton
+  - AKTabBarController
   - EasyMapping
   - GPUImage
   - HRCoder
@@ -39,8 +41,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ABMultiton: b0a22178919b139e0b3921825ace1b36ca8e8b91
+  AKTabBarController: 34443d5d028700dea1d00a6f275e8ef17fc947c2
   EasyMapping: 9e23ea67fb60bcb1761e5972ef62a08a03758f50
-  Facebook-iOS-SDK: 1c59b1f4838e5f8d3cb71943096673db3eefb15d
+  Facebook-iOS-SDK: a60c23acea22161609ef6144ffff686e6f133902
   GPUImage: 5b902c1df2afe0ac30a8e3e7379f9c0bb25c7c85
   HRCoder: 686700a4246e96844cc898052da171229ee5f65d
   JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601

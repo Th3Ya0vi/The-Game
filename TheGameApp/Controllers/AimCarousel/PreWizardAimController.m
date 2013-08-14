@@ -53,9 +53,11 @@
 {
     [[SocManager sharedManager] logout];
     
-    [self dismissViewControllerAnimated:YES completion:^{
+    /*[self dismissViewControllerAnimated:YES completion:^{
        [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentLoginViewControllerAnimated:YES];
-    }];
+    }];*/
+
+    [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentLoginViewControllerAnimated:YES];
 }
 
 @end

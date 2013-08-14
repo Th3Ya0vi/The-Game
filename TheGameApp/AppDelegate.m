@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Reachability/Reachability.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import <AKTabBarController/AKTabBarController.h>
 
 #import "TGWelcomeViewController.h"
 #import "TGLoginViewController.h"
@@ -22,6 +23,7 @@
 
 @property (nonatomic, strong) TGWelcomeViewController *welcomeViewController;
 @property (nonatomic, strong) PreWizardAimController *wizardViewController;
+@property (nonatomic, strong) AKTabBarController *rootTabBarController;
 
 @property (nonatomic, strong) Reachability *hostReach;
 @property (nonatomic, strong) Reachability *internetReach;
@@ -33,6 +35,7 @@
 
 @synthesize welcomeViewController;
 @synthesize wizardViewController;
+@synthesize rootTabBarController;
 
 @synthesize hostReach;
 @synthesize internetReach;
@@ -118,14 +121,26 @@
 
 - (void)presentLoginViewControllerAnimated:(BOOL)animated {
     TGLoginViewController *loginViewController = [[TGLoginViewController alloc] init];
-    
+    self.welcomeViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self.welcomeViewController presentModalViewController:loginViewController animated:animated];
 }
 
 - (void)presentAimWizardViewControllerAnimated:(BOOL)animated   {
     wizardViewController = [[PreWizardAimController alloc] init];
     
-    [self.welcomeViewController presentModalViewController:[[UINavigationController alloc] initWithRootViewController:wizardViewController] animated:animated];
+    self.rootNavController.viewControllers = @[self.welcomeViewController, wizardViewController];
+    self.rootNavController.visibleViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self.rootNavController dismissViewControllerAnimated:YES completion:nil];
+    //[self.welcomeViewController presentModalViewController:[[UINavigationController alloc] initWithRootViewController:wizardViewController] animated:animated];
+}
+
+- (void)presentRootTabBarController
+{
+    rootTabBarController = [[AKTabBarController alloc] initWithTabBarHeight:50];
+    [rootTabBarController setMinimumHeightToDisplayTitle:40.0];
+    
+    self.rootNavController.viewControllers = @[self.welcomeViewController, rootTabBarController];
+    [self.rootNavController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_ABMultiton 2
 #define COCOAPODS_VERSION_PATCH_ABMultiton 1
 
+// AKTabBarController
+#define COCOAPODS_POD_AVAILABLE_AKTabBarController
+#define COCOAPODS_VERSION_MAJOR_AKTabBarController 1
+#define COCOAPODS_VERSION_MINOR_AKTabBarController 1
+#define COCOAPODS_VERSION_PATCH_AKTabBarController 0
+
 // EasyMapping
 #define COCOAPODS_POD_AVAILABLE_EasyMapping
 #define COCOAPODS_VERSION_MAJOR_EasyMapping 0

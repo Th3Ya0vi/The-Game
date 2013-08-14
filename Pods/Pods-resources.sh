@@ -25,6 +25,7 @@ install_resource()
       ;;
   esac
 }
+install_resource 'AKTabBarController/AKTabBarController/AKTabBarController.bundle'
 install_resource 'Facebook-iOS-SDK/src/FBUserSettingsViewResources.bundle'
 install_resource 'ShareKit/Classes/ShareKit/ShareKit.bundle'
 install_resource 'ShareKit/Classes/ShareKit/Core/SHKSharers.plist'
