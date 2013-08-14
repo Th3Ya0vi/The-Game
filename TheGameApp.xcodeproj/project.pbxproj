@@ -109,6 +109,21 @@
 		18A0918617B18CBF0015C0F2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A0918517B18CBF0015C0F2 /* Social.framework */; };
 		7C9E18D117BBA2C900F15404 /* RootGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E18CF17BBA2C900F15404 /* RootGameViewController.m */; };
 		7C9E18D217BBA2C900F15404 /* RootGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18D017BBA2C900F15404 /* RootGameViewController.xib */; };
+		7C9E18DA17BBA84A00F15404 /* RootMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E18D817BBA84A00F15404 /* RootMessagesViewController.m */; };
+		7C9E18DB17BBA84A00F15404 /* RootMessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18D917BBA84A00F15404 /* RootMessagesViewController.xib */; };
+		7C9E18DF17BBA85F00F15404 /* RootProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E18DD17BBA85F00F15404 /* RootProfileViewController.m */; };
+		7C9E18E017BBA85F00F15404 /* RootProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18DE17BBA85F00F15404 /* RootProfileViewController.xib */; };
+		7C9E18E417BBA87A00F15404 /* RootSbscrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E18E217BBA87A00F15404 /* RootSbscrViewController.m */; };
+		7C9E18E517BBA87A00F15404 /* RootSbscrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18E317BBA87A00F15404 /* RootSbscrViewController.xib */; };
+		7C9E18E917BBA89900F15404 /* RootAddReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E18E717BBA89900F15404 /* RootAddReportViewController.m */; };
+		7C9E18EA17BBA89900F15404 /* RootAddReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18E817BBA89900F15404 /* RootAddReportViewController.xib */; };
+		7C9E18F317BBAB9600F15404 /* tabbar-arrows-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18EC17BBAB9600F15404 /* tabbar-arrows-icon@2x.png */; };
+		7C9E18F417BBAB9600F15404 /* tabbar-eye-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18ED17BBAB9600F15404 /* tabbar-eye-icon@2x.png */; };
+		7C9E18F517BBAB9600F15404 /* tabbar-mail-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18EE17BBAB9600F15404 /* tabbar-mail-icon@2x.png */; };
+		7C9E18F617BBAB9600F15404 /* tabbar-messages-icon-STATE-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18EF17BBAB9600F15404 /* tabbar-messages-icon-STATE-active@2x.png */; };
+		7C9E18F717BBAB9600F15404 /* tabbar-targets-icon-STATE-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18F017BBAB9600F15404 /* tabbar-targets-icon-STATE-active@2x.png */; };
+		7C9E18F817BBAB9600F15404 /* tabbar-targets-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18F117BBAB9600F15404 /* tabbar-targets-icon@2x.png */; };
+		7C9E18F917BBAB9600F15404 /* tabbar-user-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E18F217BBAB9600F15404 /* tabbar-user-icon@2x.png */; };
 		7CD5395717B2198D00EACBF9 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395617B2198D00EACBF9 /* FacebookSDKResources.bundle */; };
 		7CD5396617B2525900EACBF9 /* toolbar-back-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395B17B2525900EACBF9 /* toolbar-back-icon@2x.png */; };
 		7CD5396717B2525900EACBF9 /* toolbar-cancel-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5395C17B2525900EACBF9 /* toolbar-cancel-icon@2x.png */; };
@@ -273,6 +288,25 @@
 		7C9E18CE17BBA2C900F15404 /* RootGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootGameViewController.h; sourceTree = "<group>"; };
 		7C9E18CF17BBA2C900F15404 /* RootGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootGameViewController.m; sourceTree = "<group>"; };
 		7C9E18D017BBA2C900F15404 /* RootGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootGameViewController.xib; sourceTree = "<group>"; };
+		7C9E18D717BBA84A00F15404 /* RootMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootMessagesViewController.h; sourceTree = "<group>"; };
+		7C9E18D817BBA84A00F15404 /* RootMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootMessagesViewController.m; sourceTree = "<group>"; };
+		7C9E18D917BBA84A00F15404 /* RootMessagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootMessagesViewController.xib; sourceTree = "<group>"; };
+		7C9E18DC17BBA85F00F15404 /* RootProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootProfileViewController.h; sourceTree = "<group>"; };
+		7C9E18DD17BBA85F00F15404 /* RootProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootProfileViewController.m; sourceTree = "<group>"; };
+		7C9E18DE17BBA85F00F15404 /* RootProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootProfileViewController.xib; sourceTree = "<group>"; };
+		7C9E18E117BBA87A00F15404 /* RootSbscrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootSbscrViewController.h; sourceTree = "<group>"; };
+		7C9E18E217BBA87A00F15404 /* RootSbscrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSbscrViewController.m; sourceTree = "<group>"; };
+		7C9E18E317BBA87A00F15404 /* RootSbscrViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootSbscrViewController.xib; sourceTree = "<group>"; };
+		7C9E18E617BBA89900F15404 /* RootAddReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootAddReportViewController.h; sourceTree = "<group>"; };
+		7C9E18E717BBA89900F15404 /* RootAddReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootAddReportViewController.m; sourceTree = "<group>"; };
+		7C9E18E817BBA89900F15404 /* RootAddReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootAddReportViewController.xib; sourceTree = "<group>"; };
+		7C9E18EC17BBAB9600F15404 /* tabbar-arrows-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-arrows-icon@2x.png"; sourceTree = "<group>"; };
+		7C9E18ED17BBAB9600F15404 /* tabbar-eye-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-eye-icon@2x.png"; sourceTree = "<group>"; };
+		7C9E18EE17BBAB9600F15404 /* tabbar-mail-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-mail-icon@2x.png"; sourceTree = "<group>"; };
+		7C9E18EF17BBAB9600F15404 /* tabbar-messages-icon-STATE-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-messages-icon-STATE-active@2x.png"; sourceTree = "<group>"; };
+		7C9E18F017BBAB9600F15404 /* tabbar-targets-icon-STATE-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-targets-icon-STATE-active@2x.png"; sourceTree = "<group>"; };
+		7C9E18F117BBAB9600F15404 /* tabbar-targets-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-targets-icon@2x.png"; sourceTree = "<group>"; };
+		7C9E18F217BBAB9600F15404 /* tabbar-user-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-user-icon@2x.png"; sourceTree = "<group>"; };
 		7CD5395617B2198D00EACBF9 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		7CD5395B17B2525900EACBF9 /* toolbar-back-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-back-icon@2x.png"; sourceTree = "<group>"; };
 		7CD5395C17B2525900EACBF9 /* toolbar-cancel-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-cancel-icon@2x.png"; sourceTree = "<group>"; };
@@ -475,6 +509,10 @@
 		18A09061179C36830015C0F2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C9E18D317BBA83100F15404 /* AddReport */,
+				7C9E18D417BBA83100F15404 /* Messages */,
+				7C9E18D517BBA83100F15404 /* MyProfile */,
+				7C9E18D617BBA83200F15404 /* Subscriptions */,
 				18A09062179C3C0C0015C0F2 /* Login */,
 				7C4071B417A01097008EFF19 /* AimCarousel */,
 				7C9E18CD17BBA06F00F15404 /* Game */,
@@ -644,6 +682,7 @@
 		7C4071B117A00CE7008EFF19 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				7C9E18EB17BBAB9600F15404 /* TabBarIcon */,
 				18A0911717AEF6C40015C0F2 /* Filters */,
 				18A090A117AD45970015C0F2 /* icons */,
 				7CD5395B17B2525900EACBF9 /* toolbar-back-icon@2x.png */,
@@ -693,6 +732,64 @@
 			);
 			name = Game;
 			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/Game";
+			sourceTree = "<group>";
+		};
+		7C9E18D317BBA83100F15404 /* AddReport */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E18E617BBA89900F15404 /* RootAddReportViewController.h */,
+				7C9E18E717BBA89900F15404 /* RootAddReportViewController.m */,
+				7C9E18E817BBA89900F15404 /* RootAddReportViewController.xib */,
+			);
+			name = AddReport;
+			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/AddReport";
+			sourceTree = "<group>";
+		};
+		7C9E18D417BBA83100F15404 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E18D717BBA84A00F15404 /* RootMessagesViewController.h */,
+				7C9E18D817BBA84A00F15404 /* RootMessagesViewController.m */,
+				7C9E18D917BBA84A00F15404 /* RootMessagesViewController.xib */,
+			);
+			name = Messages;
+			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/Messages";
+			sourceTree = "<group>";
+		};
+		7C9E18D517BBA83100F15404 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E18DC17BBA85F00F15404 /* RootProfileViewController.h */,
+				7C9E18DD17BBA85F00F15404 /* RootProfileViewController.m */,
+				7C9E18DE17BBA85F00F15404 /* RootProfileViewController.xib */,
+			);
+			name = MyProfile;
+			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/MyProfile";
+			sourceTree = "<group>";
+		};
+		7C9E18D617BBA83200F15404 /* Subscriptions */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E18E117BBA87A00F15404 /* RootSbscrViewController.h */,
+				7C9E18E217BBA87A00F15404 /* RootSbscrViewController.m */,
+				7C9E18E317BBA87A00F15404 /* RootSbscrViewController.xib */,
+			);
+			name = Subscriptions;
+			path = "../../../../../../denisdbv/Documents/Develop/The-Game/TheGameApp/Controllers/Subscriptions";
+			sourceTree = "<group>";
+		};
+		7C9E18EB17BBAB9600F15404 /* TabBarIcon */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E18EC17BBAB9600F15404 /* tabbar-arrows-icon@2x.png */,
+				7C9E18ED17BBAB9600F15404 /* tabbar-eye-icon@2x.png */,
+				7C9E18EE17BBAB9600F15404 /* tabbar-mail-icon@2x.png */,
+				7C9E18EF17BBAB9600F15404 /* tabbar-messages-icon-STATE-active@2x.png */,
+				7C9E18F017BBAB9600F15404 /* tabbar-targets-icon-STATE-active@2x.png */,
+				7C9E18F117BBAB9600F15404 /* tabbar-targets-icon@2x.png */,
+				7C9E18F217BBAB9600F15404 /* tabbar-user-icon@2x.png */,
+			);
+			path = TabBarIcon;
 			sourceTree = "<group>";
 		};
 		7CE0CFBE17A29EEA005553E4 /* Views */ = {
@@ -854,6 +951,17 @@
 				7CD5396F17B2525900EACBF9 /* toolbar-proceed-icon-white@2x.png in Resources */,
 				7CD5397017B2525900EACBF9 /* toolbar-video-icon@2x.png in Resources */,
 				7C9E18D217BBA2C900F15404 /* RootGameViewController.xib in Resources */,
+				7C9E18DB17BBA84A00F15404 /* RootMessagesViewController.xib in Resources */,
+				7C9E18E017BBA85F00F15404 /* RootProfileViewController.xib in Resources */,
+				7C9E18E517BBA87A00F15404 /* RootSbscrViewController.xib in Resources */,
+				7C9E18EA17BBA89900F15404 /* RootAddReportViewController.xib in Resources */,
+				7C9E18F317BBAB9600F15404 /* tabbar-arrows-icon@2x.png in Resources */,
+				7C9E18F417BBAB9600F15404 /* tabbar-eye-icon@2x.png in Resources */,
+				7C9E18F517BBAB9600F15404 /* tabbar-mail-icon@2x.png in Resources */,
+				7C9E18F617BBAB9600F15404 /* tabbar-messages-icon-STATE-active@2x.png in Resources */,
+				7C9E18F717BBAB9600F15404 /* tabbar-targets-icon-STATE-active@2x.png in Resources */,
+				7C9E18F817BBAB9600F15404 /* tabbar-targets-icon@2x.png in Resources */,
+				7C9E18F917BBAB9600F15404 /* tabbar-user-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,6 +1058,10 @@
 				18A0918317B183090015C0F2 /* VKDialog.m in Sources */,
 				18A0918417B183090015C0F2 /* Vkontakte.m in Sources */,
 				7C9E18D117BBA2C900F15404 /* RootGameViewController.m in Sources */,
+				7C9E18DA17BBA84A00F15404 /* RootMessagesViewController.m in Sources */,
+				7C9E18DF17BBA85F00F15404 /* RootProfileViewController.m in Sources */,
+				7C9E18E417BBA87A00F15404 /* RootSbscrViewController.m in Sources */,
+				7C9E18E917BBA89900F15404 /* RootAddReportViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

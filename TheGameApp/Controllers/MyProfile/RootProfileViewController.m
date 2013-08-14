@@ -1,18 +1,18 @@
 //
-//  RootGameViewController.m
+//  RootProfileViewController.m
 //  TheGameApp
 //
 //  Created by denisdbv@gmail.com on 14.08.13.
 //  Copyright (c) 2013 axbx. All rights reserved.
 //
 
-#import "RootGameViewController.h"
+#import "RootProfileViewController.h"
 
-@interface RootGameViewController ()
+@interface RootProfileViewController ()
 
 @end
 
-@implementation RootGameViewController
+@implementation RootProfileViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,12 +40,12 @@
 
 - (NSString *)tabTitle
 {
-	return @"Игра";
+	return @"Вы";
 }
 
 -(NSString*)tabImageName
 {
-    return @"tabbar-targets-icon-STATE-active@2x.png";
+    return @"tabbar-user-icon@2x.png";
 }
 
 @end

@@ -15,6 +15,12 @@
 #import "TGLoginViewController.h"
 #import "PreWizardAimController.h"
 
+#import "RootGameViewController.h"
+#import "RootMessagesViewController.h"
+#import "RootAddReportViewController.h"
+#import "RootSbscrViewController.h"
+#import "RootProfileViewController.h"
+
 #import "MySHKConfigurator.h"
 #import "SHKConfiguration.h"
 #import <FacebookSDK/FacebookSDK.h>
@@ -24,6 +30,12 @@
 @property (nonatomic, strong) TGWelcomeViewController *welcomeViewController;
 @property (nonatomic, strong) PreWizardAimController *wizardViewController;
 @property (nonatomic, strong) AKTabBarController *rootTabBarController;
+
+@property (nonatomic, strong) RootGameViewController *rootGameVC;
+@property (nonatomic, strong) RootMessagesViewController *rootMessagesVC;
+@property (nonatomic, strong) RootAddReportViewController *rootAddReportVC;
+@property (nonatomic, strong) RootSbscrViewController *rootSubscriptionVC;
+@property (nonatomic, strong) RootProfileViewController *rootProfileVC;
 
 @property (nonatomic, strong) Reachability *hostReach;
 @property (nonatomic, strong) Reachability *internetReach;
@@ -36,6 +48,8 @@
 @synthesize welcomeViewController;
 @synthesize wizardViewController;
 @synthesize rootTabBarController;
+
+@synthesize rootGameVC, rootMessagesVC, rootAddReportVC, rootSubscriptionVC, rootProfileVC;
 
 @synthesize hostReach;
 @synthesize internetReach;
@@ -138,6 +152,26 @@
 {
     rootTabBarController = [[AKTabBarController alloc] initWithTabBarHeight:50];
     [rootTabBarController setMinimumHeightToDisplayTitle:40.0];
+    
+    rootGameVC = [[RootGameViewController alloc] init];
+    rootMessagesVC = [[RootMessagesViewController alloc] init];
+    rootAddReportVC = [[RootAddReportViewController alloc] init];
+    rootSubscriptionVC = [[RootSbscrViewController alloc] init];
+    rootProfileVC = [[RootProfileViewController alloc] init];
+    
+    UINavigationController *navigationRootGameVC = [[UINavigationController alloc] initWithRootViewController:rootGameVC];
+    UINavigationController *navigationRootMessagesVC = [[UINavigationController alloc] initWithRootViewController:rootMessagesVC];
+    UINavigationController *navigationRootAddReportVC = [[UINavigationController alloc] initWithRootViewController:rootAddReportVC];
+    UINavigationController *navigationRootSubscriptionVC = [[UINavigationController alloc] initWithRootViewController:rootSubscriptionVC];
+    UINavigationController *navigationRootProfileVC = [[UINavigationController alloc] initWithRootViewController:rootProfileVC];
+    
+    [rootTabBarController setViewControllers:[NSMutableArray arrayWithObjects:
+                                              navigationRootGameVC,
+                                              navigationRootMessagesVC,
+                                              navigationRootAddReportVC,
+                                              navigationRootSubscriptionVC,
+                                              navigationRootProfileVC,
+                                              nil]];
     
     self.rootNavController.viewControllers = @[self.welcomeViewController, rootTabBarController];
     [self.rootNavController dismissViewControllerAnimated:YES completion:nil];

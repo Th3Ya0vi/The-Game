@@ -1,18 +1,18 @@
 //
-//  RootGameViewController.m
+//  RootSbscrViewController.m
 //  TheGameApp
 //
 //  Created by denisdbv@gmail.com on 14.08.13.
 //  Copyright (c) 2013 axbx. All rights reserved.
 //
 
-#import "RootGameViewController.h"
+#import "RootSbscrViewController.h"
 
-@interface RootGameViewController ()
+@interface RootSbscrViewController ()
 
 @end
 
-@implementation RootGameViewController
+@implementation RootSbscrViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,12 +40,12 @@
 
 - (NSString *)tabTitle
 {
-	return @"Игра";
+	return @"Подписи";
 }
 
 -(NSString*)tabImageName
 {
-    return @"tabbar-targets-icon-STATE-active@2x.png";
+    return @"tabbar-eye-icon@2x.png";
 }
 
 @end

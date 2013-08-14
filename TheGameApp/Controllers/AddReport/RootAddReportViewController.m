@@ -1,18 +1,18 @@
 //
-//  RootGameViewController.m
+//  RootAddReportViewController.m
 //  TheGameApp
 //
 //  Created by denisdbv@gmail.com on 14.08.13.
 //  Copyright (c) 2013 axbx. All rights reserved.
 //
 
-#import "RootGameViewController.h"
+#import "RootAddReportViewController.h"
 
-@interface RootGameViewController ()
+@interface RootAddReportViewController ()
 
 @end
 
-@implementation RootGameViewController
+@implementation RootAddReportViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,12 +40,12 @@
 
 - (NSString *)tabTitle
 {
-	return @"Игра";
+	return @"Добавить";
 }
 
 -(NSString*)tabImageName
 {
-    return @"tabbar-targets-icon-STATE-active@2x.png";
+    return @"tabbar-arrows-icon@2x.png";
 }
 
 @end
