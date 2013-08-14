@@ -9,6 +9,7 @@
 #import "RootWizardViewController.h"
 #import "AimObjectsManager.h"
 #import "AppDelegate.h"
+#import <SIAlertView/SIAlertView.h>
 
 @implementation UINavigationBar (customNav)
 - (CGSize)sizeThatFits:(CGSize)size
@@ -167,9 +168,8 @@
 #pragma mark -- Navigation controller buttons selectors
 -(void) onNextPage
 {
-    //pageIndex++;
-    //[self scrollToPage: pageIndex animated:YES];
-    [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentRootTabBarController];
+    pageIndex++;
+    [self scrollToPage: pageIndex animated:YES];
 }
 
 -(void) saveAllDataToCache
@@ -197,12 +197,14 @@
 
 -(void) scrollToPage:(NSInteger)page animated:(BOOL)animated
 {
-    if (page <= 0) {
+    if (page < 0) {
         page = 0;
         pageIndex = 0;
-    } else if(page >= 9)    {
+    } else if(page > 9)    {
         page = 9;
         pageIndex = 9;
+        
+        [self showFinishAlert];
     }
     
     [scrollContainerForAims scrollRectToVisible:CGRectMake(page * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.bounds.size.height) animated:animated];
@@ -285,6 +287,29 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self performSelectorOnMainThread:@selector(saveAllDataToCache) withObject:nil waitUntilDone:NO];
+    
+    float w = scrollView.frame.size.width * 9;
+    BOOL x = scrollView.contentOffset.x >= w;
+    if (x)
+    {
+        [self showFinishAlert];
+    }
+}
+
+-(void) showFinishAlert
+{
+    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:nil andMessage:@"Вы готовы начать игру?"];
+    [alertView addButtonWithTitle:@"НЕТ"
+                             type:SIAlertViewButtonTypeDefault
+                          handler:^(SIAlertView *alertView) {
+                              //
+                          }];
+    [alertView addButtonWithTitle:@"ДА"
+                             type:SIAlertViewButtonTypeDestructive
+                          handler:^(SIAlertView *alertView) {
+                              [(AppDelegate*)[[UIApplication sharedApplication] delegate] presentRootTabBarController];
+                          }];
+    [alertView show];
 }
 
 @end

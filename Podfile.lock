@@ -19,6 +19,7 @@ PODS:
   - ShareKit/Vkontakte (2.3.1):
     - JSONKit (~> 1.4)
     - ShareKit/Core
+  - SIAlertView (1.2)
   - SSKeychain (0.2.1)
   - SSToolkit (1.0.4)
   - xmlrpc (2.3.3):
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - Reachability
   - ShareKit/Facebook
   - ShareKit/Vkontakte
+  - SIAlertView
   - SSToolkit
   - xmlrpc
 
@@ -52,6 +54,7 @@ SPEC CHECKSUMS:
   NSData+Base64: 36c4e5b6479259c1a68866ccd2a8dd385c9744f7
   Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
   ShareKit: d33d7a36ecc08e5c2fe4ef9c8dfcb0ada1e659a0
+  SIAlertView: fd188f66278761f4ff069f517c3deb2be16ecdcc
   SSKeychain: ffa1a79eb716d9ed1ca184fb0cf218087ca28486
   SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4
   xmlrpc: 9ebaa6298ce90ff0c3c30404681f2030bdde54db

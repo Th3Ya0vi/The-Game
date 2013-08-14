@@ -73,6 +73,12 @@
 #define COCOAPODS_VERSION_MINOR_Reachability 1
 #define COCOAPODS_VERSION_PATCH_Reachability 0
 
+// SIAlertView
+#define COCOAPODS_POD_AVAILABLE_SIAlertView
+#define COCOAPODS_VERSION_MAJOR_SIAlertView 1
+#define COCOAPODS_VERSION_MINOR_SIAlertView 2
+#define COCOAPODS_VERSION_PATCH_SIAlertView 0
+
 // SSKeychain
 #define COCOAPODS_POD_AVAILABLE_SSKeychain
 #define COCOAPODS_VERSION_MAJOR_SSKeychain 0
